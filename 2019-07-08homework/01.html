@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .all {
+            width: 850px;
+            height: 600px;
+            border: 1px solid black;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .all .box {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .all .box1 {
+            left: 100px;
+            animation: animated01 1s infinite alternate;
+        }
+
+        .all .box2 {
+            left: 250px;
+            animation: animated02 5s infinite alternate;
+        }
+
+        .all .box3 {
+            left: 400px;
+            border-radius: 50%;
+            animation: animated03 1s infinite;
+            animation-timing-function:linear;
+        }
+
+        .all .box4 {
+            left: 550px;
+            animation: animated05 3s infinite;
+
+        }
+
+        .all .box5 {
+            left: 700px;
+        }
+
+        @keyframes animated01 {
+            0% {
+                bottom: 0px;
+            }
+
+            25% {
+                bottom: 200px;
+            }
+
+            50% {
+                left: 20px;
+            }
+
+            75% {
+                left: 20px;
+                bottom: 0;
+            }
+
+            100% {
+                bottom: 0px;
+            }
+        }
+
+        @keyframes animated02 {
+            0% {
+                bottom: 0;
+            }
+
+            25% {
+                bottom: 300px;
+                transform: rotate(3600deg);
+                background-color: red;
+            }
+
+            50% {
+                bottom: 500px;
+                transform: scale(3) rotate(360deg);
+            }
+
+            70% {
+                left: 900px;
+                bottom: 0px;
+            }
+
+            100% {
+                left: 250px;
+            }
+        }
+
+        @keyframes animated03 {
+            0% {
+                bottom: 0;
+                transform: scaleY(0.3);
+            }
+            10% {
+   
+                transform: scaleY(1);
+                transform: scaleX(0.6);
+            }
+            30%{
+            } 
+            50% {
+                transform: scaleX(1);
+                transform: scaley(1);
+                bottom: 200px;
+            }
+            60%{
+            }
+            90% {
+
+                transform: scaleY(1);
+                transform: scaleX(0.6);
+            }
+            100% {
+                bottom: 0px;
+                transform: scaleY(0.3);
+            }
+        }
+        @keyframes animated04 {
+            0% {
+                top: 0;
+            }
+
+            33% {
+                top: -40px;
+            }
+
+            67% {
+                top: -80px;
+            }
+
+            100% {
+                top: 0;
+            }
+        }
+
+        @keyframes animated05 {
+            0% {
+                top: 200px left:500px;
+            }
+        }
+
+        .all2 {
+            width: 200px;
+            height: 40px;
+            background-color: brown;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .s {
+            width: 40px;
+            height: 40px;
+            background-color: aquamarine;
+            position: absolute;
+        }
+
+        .b {
+            width: 160px;
+            height: 120px;
+            background: cyan;
+            position: absolute;
+            left: 40px;
+            animation: animated04 2s infinite;
+        }
+
+        .dd {
+            width: 160px;
+            height: 40px;
+            background-color: blue;
+            font-size: 38px;
+
+        }
+
+        .bb.dd {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+    </div>
+    <div class="all2">
+        <div class="s"></div>
+        <div class="b">
+            <div class="aa dd">呵呵</div>
+            <div class="bb dd">尛</div>
+            <div class="aa dd">ㄎㄎ</div>
+        </div>
+    </div>
+</body>
+
+</html>

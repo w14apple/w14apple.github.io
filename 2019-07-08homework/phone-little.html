@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>phone-little</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .all{
+            width: 100%;
+            height: 100vh;
+            background-color: gray;
+        }
+        .all .navbar{
+            width: 100%;
+            height: 80px;
+            background-color: aquamarine;
+        }
+        .all .navbar .logo{
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            position: absolute;
+            top:15px;
+            left: calc(50% - 25px);
+        }
+        .all .navbar .main{
+            width: 40px;
+            height: 40px;
+            background-color:green;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        
+        .all .navbar .nav-btn{
+            display: none;
+        } 
+        .all .view-all{
+            width: 100%;
+            height: 587px;
+            background-color: blueviolet;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .all .view-all .view{
+            width: 100%;
+            height: 100%;
+            background-color: aquamarine;
+        }
+        
+        .all .view-all .view .viewL{
+            width: 100%;
+            height: 33%;
+            background-color: brown;
+        }
+        .all .view-all .view .viewM{
+            width: 100%;
+            height: 34%;
+            background-color: green;
+
+        }
+        .all .view-all .view .viewR{
+            width: 100%;
+            height: 33%;
+            background-color: brown;
+        }
+        
+      
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <nav class="navbar">
+            <div class="logo"></div>
+            <div class="main"></div>
+            <ul class="nav-btn">
+                <il class="btn nav-btn1">a</il>
+                <il class="btn nav-btn2">b</il>
+                <il class="btn nav-btn3">c</il>
+            </ul> 
+        </nav>
+        <div class="view-all">
+            <div class="view">
+                <div class="scr viewL"></div>
+                <div class="scr viewM"></div>
+                <div class="scr viewR"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

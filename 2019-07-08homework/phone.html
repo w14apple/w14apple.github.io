@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>phone</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .all{
+            width: 100%;
+            height: 100vh;
+            background-color: gray;
+        }
+        .all .navbar{
+            width: 100%;
+            height: 100px;
+            background-color: aquamarine;
+            margin-bottom: 50px;
+        }
+        .all .navbar .logo{
+            width: 80px;
+            height: 80px;
+            background-color: brown;
+            float: left;
+            margin-top: 10px;
+            margin-left: 10%
+        }
+        .all .navbar .nav-btn{
+            width: 50%;
+            height: 20px;
+            background-color: cadetblue;
+            padding-left:0; 
+            float: right;
+            margin-right:10%;
+            margin-top: 40px 
+        } 
+        .all .navbar .nav-btn .btn.nav-btn1{
+            width: 33%;
+            height: 20px;
+            background-color: aqua;
+            float: left;
+        }
+        .all .navbar .nav-btn .btn.nav-btn2{
+            width: 34%;
+            height: 20px;
+            background-color: aqua;
+            float: left;
+        }
+        .all .navbar .nav-btn .btn.nav-btn3{
+            width: 33%;
+            height: 20px;
+            background-color: aqua;
+            float: left;
+        }
+        .all .view-all{
+            width: 0%;
+            height: 874px;
+            background-color: blueviolet;
+            margin: 0 auto;
+        }
+        .all .view-all .view{
+            width: 100%;
+            height: 800px;
+            background-color: aquamarine;
+        }
+        .all .view-all .view .scr{
+            float: left;
+        }
+        .all .view-all .view .viewL{
+            width: 100%;
+            height: 400px;
+            background-color: brown;
+            margin-bottom: 10px;
+        }
+        .all .view-all .view .viewM{
+            width: calc(50% - 5px);
+            height: 390px;
+            background-color: brown;
+            margin-right: 10px;
+
+        }
+        .all .view-all .view .viewR{
+            width: calc(50% - 5px);
+            height: 390px;
+            background-color: brown;
+        }
+        
+      
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <nav class="navbar">
+            <div class="logo"></div>
+            <ul class="nav-btn">
+                <il class="btn nav-btn1">a</il>
+                <il class="btn nav-btn2">b</il>
+                <il class="btn nav-btn3">c</il>
+            </ul>
+        </nav>
+        <div class="view-all">
+            <div class="view">
+                <div class="scr viewL"></div>
+                <div class="scr viewM"></div>
+                <div class="scr viewR"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

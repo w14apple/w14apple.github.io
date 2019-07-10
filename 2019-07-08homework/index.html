@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>all</title>
+    <style>
+        *{
+            margin: 0;
+            transition-duration: 0.5s;
+        }
+        .all{
+            width: 100%;
+            height: 100vh;
+            background-color: gray;
+        }
+        .all .navbar{
+            width: 325px;
+            height: 100vh;
+            background-color: aquamarine;
+            float: left;
+        }
+        .all .navbar .logo{
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            margin: 0 auto;
+            margin-top: 75px;
+            background-image: url(img/avanter.jfif);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .all .navbar .nav-btn{
+            width: 100px;
+            height: 90px;
+            background-color: cadetblue;
+            margin: 0 auto;
+            margin-top: 60px;
+            padding: 0;
+            text-align: center;
+        } 
+        .all .navbar .nav-btn .btn{
+            width: 100px;
+            height: 30px;
+            background-color: aqua;
+            float: left;
+        }
+        .all .view-all{
+            width: calc(100% - 325px);
+            height: 100vh;
+            background-color: blueviolet;
+            float: left;
+        }
+        .all .view-all .view{
+            width: 960px;
+            height: 570px;
+            background-color: aquamarine;
+            margin: 0 auto;
+            margin-top: 255px;
+        }
+        .all .view-all .view .scr{
+            float: left;
+        }
+        .all .view-all .view .viewL{
+            width: calc(33% - 10px);
+            height: 570px;
+            background-color: brown;
+            background-image: url(img/01.png);
+            background-position: center;
+            background-size: cover;
+            margin-right: 10px
+        }
+        .all .view-all .view .viewM{
+            width: calc(34% - 10px);
+            height: 570px;
+            background-color: brown;
+            margin-right: 10px;
+            background-image: url(img/02.png);
+            background-position: center;
+            background-size: cover;
+
+        }
+        .all .view-all .view .viewR{
+            width: 33%;
+            height: 570px;
+            background-color: brown;
+            background-image: url(img/03.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .all .view-all .view:hover{
+            background-color: aquamarine;
+        }
+        .all .view-all .view .viewL:hover{
+            background-image: url(img/04.jpg);
+        }
+        .all .view-all .view .viewM:hover{
+            background-image: url(img/05.jpg);
+        }
+        .all .view-all .view .viewR:hover{
+            background-image: url(img/06.jpg);
+        }
+        .all .navbar .nav-btn .btn:hover{
+            background-color: green;
+        }
+        .all .navbar .nav-btn .btn:active{
+            background-color:yellow;
+        }
+        .all .navbar .nav-btn .btn:visited{
+            background-color:palevioletred;
+        }
+
+
+    @media screen and (max-width:1280px){
+        .all .view-all{
+            width: calc(100% - 325px);
+            height: 100vh;
+            background-color: blueviolet;
+            float: left;
+        }
+        .all .view-all .view{
+            width: 800px;
+            height: 570px;
+            background-color: aquamarine;
+            margin: 0 auto;
+            margin-top: 255px;
+        }
+        .all .view-all .view .scr{
+            float: left;
+        }
+        .all .view-all .view .viewL{
+            width: 395px;
+            height: 280px;
+            background-color: brown;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .all .view-all .view .viewM{
+            width: 395px;
+            height: 280px;
+            background-color: brown;
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+        .all .view-all .view .viewR{
+            width: 800px;
+            height: 280px;
+            background-color: brown;
+        }
+    }
+    @media screen and (max-width:768px){
+        .all{
+            width: 100%;
+            height: 100vh;
+            background-color: gray;
+        }
+        .all .navbar{
+            width: 100%;
+            height: 100px;
+            background-color: aquamarine;
+            margin-bottom: 50px;
+        }
+        .all .navbar .logo{
+            width: 80px;
+            height: 80px;
+            background-color: brown;
+            float: left;
+            margin-top: 10px;
+            margin-left: 5%
+        }
+        .all .navbar .nav-btn{
+            width: 50%;
+            height: 20px;
+            background-color: cadetblue;
+            padding-left:0; 
+            float: right;
+            margin-right:5%;
+            margin-top: 40px 
+        } 
+        .all .navbar .nav-btn .btn.nav-btn1{
+            width: 33%;
+            height: 20px;
+            background-color: aqua;
+            float: left;
+        }
+        .all .navbar .nav-btn .btn.nav-btn2{
+            width: 34%;
+            height: 20px;
+            background-color: aqua;
+            float: left;
+        }
+        .all .navbar .nav-btn .btn.nav-btn3{
+            width: 33%;
+            height: 20px;
+            background-color: aqua;
+            float: left;
+        }
+        .all .view-all{
+            width: 90%;
+            height: 874px;
+            background-color: blueviolet;
+            margin-left: 5%;
+        }
+        .all .view-all .view{
+            width: 100%;
+            height: 800px;
+            background-color: aquamarine;
+            margin-top: 0;
+        }
+        .all .view-all .view .scr{
+            float: left;
+        }
+        .all .view-all .view .viewL{
+            width: 100%;
+            height: 400px;
+            background-color: brown;
+            margin-bottom: 10px;
+        }
+        .all .view-all .view .viewM{
+            width: calc(50% - 5px);
+            height: 390px;
+            background-color: brown;
+            margin-right: 10px;
+
+        }
+        .all .view-all .view .viewR{
+            width: calc(50% - 5px);
+            height: 390px;
+            background-color: brown;
+        }
+    }
+    @media screen and (max-width:375px){
+        .all{
+            width: 100%;
+            height: 100vh;
+            background-color: gray;
+        }
+        .all .navbar{
+            width: 100%;
+            height: 80px;
+            background-color: aquamarine;
+            margin-bottom: 0;
+        }
+        .all .navbar .logo{
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            position: absolute;
+            top:15px;
+            left: calc(50% - 25px);
+            margin: 0;
+        }
+        .all .navbar .main{
+            width: 40px;
+            height: 40px;
+            background-color:green;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        
+        .all .navbar .nav-btn{
+            display: none;
+        } 
+        .all .view-all{
+            width: 100%;
+            height: 587px;
+            background-color: blueviolet;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .all .view-all .view{
+            width: 100%;
+            height: 100%;
+            background-color: aquamarine;
+        }
+        
+        .all .view-all .view .viewL{
+            width: 100%;
+            height: 33%;
+            background-color: brown;
+        }
+        .all .view-all .view .viewM{
+            width: 100%;
+            height: 34%;
+            background-color: green;
+
+        }
+        .all .view-all .view .viewR{
+            width: 100%;
+            height: 33%;
+            background-color: brown;
+        }
+    }
+    
+</style>
+</head>
+
+<body>
+    <div class="all">
+        <nav class="navbar">
+            <div class="logo"></div>
+            <div class="main"></div>
+            <ul class="nav-btn">
+                <il class="btn nav-btn1"><a href="https://www.google.com/">master</a></il>
+                <il class="btn nav-btn2"><a href="https://www.google.com/">buy</a></il>
+                <il class="btn nav-btn3"><a href="https://www.google.com/">nope</a></il>
+            </ul>
+        </nav>
+        <div class="view-all">
+            <div class="view">
+                <div class="scr viewL"></div>
+                <div class="scr viewM"></div>
+                <div class="scr viewR"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
