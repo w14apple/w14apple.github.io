@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>One-page</title>
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" href="practive-onepage .css">
+
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide pic01"></div>
+            <div class="swiper-slide pic02"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <nav class="navbar">
+        <ul class="nav-btn">
+            <li class="btn nav-btn1"><span class="main-btn">概要</span></li>
+            <li class="btn nav-btn2"><span class="main-btn">生態系統</span></li>
+            <li class="btn nav-btn3"><span class="main-btn">狩獵</span></li>
+            <li class="btn nav-btn4"><span class="main-btn">調查資料</span></li>
+        </ul>
+    </nav>
+    <div class="block introduction">
+        <div class="introduction-L">
+            <div class="introduction-L-text">
+                <h2 class="introduction-h2">
+                    概要
+                </h2>
+                <hr>
+                <samp>
+                    <p>玩家化身成獵人, 接受任務狩獵生活棲息在各種環境中的魔物。
+                        利用狩獵魔物取得的材料, 製作更強的武器和防具, 挑戰更強大的魔物。
+                    </p>
+                </samp>
+            </div>
+        </div>
+        <div class="introduction-R">
+            <div class="introduction-R-text">
+                <h2 class="introduction-h2">
+                    故事
+                </h2>
+                <hr>
+                <samp>
+                    <p>每10年一度，邁向遙遠彼方的新大陸，渡海的古龍們。
+                        被稱為「古龍渡」，為了解釋這奇妙的現象，公會結成「新大陸古龍調查團」，多次派調查團前往新大陸。
+                    </p>
+                </samp>
+
+            </div>
+        </div>
+    </div>
+    <div id="all">
+        <div class="block environment">
+            <div class="environment-text">
+                <h1 class="en-text">
+                    生態系統
+                </h1>
+                <p>
+                    充滿活力的新世界
+                    充滿多樣化生命群體的廣闊領域。各種各樣的發現等著你去探索。
+                </p>
+                <ul class="environment-btn">
+                    <li class="environment-btn1 en-btn"><span class="enbtn-text">古樹森林</span></li>
+                    <li class="environment-btn2 en-btn"><span class="enbtn-text">大蟻塚荒地</span></li>
+                    <li class="environment-btn3 en-btn"><span class="enbtn-text">陸珊瑚台地</span></li>
+                    <li class="environment-btn4 en-btn"><span class="enbtn-text">瘴氣之谷</span></li>
+                    <li class="environment-btn5 en-btn"><span class="enbtn-text">龍結晶之地</span></li>
+                </ul>
+            </div>
+
+            <div class="environment-pic"></div>
+        </div>
+        <div class="block hunter">
+            <div class="hunter-title">
+                <h1>
+                    狩獵
+                </h1>
+            </div>
+            <div class="hunter-text">
+                <p>
+                    多彩的武器和裝備，還有可靠的拍擋
+                    你的裝備賦予你力量去開發這個未知的新世界。
+                </p>
+            </div>
+        </div>
+        <div class="block survey">
+            <div class="survey-pic"></div>
+            <div class="survey-text">
+                <h1>
+                    調查資料
+                </h1>
+                <p>
+                    星辰
+
+                    作為調查團的基地，獵人、調查員及技術人員均聚集在此。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+
+
+    <script src="swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>
+
+</html>
