@@ -10,23 +10,27 @@
 
 <body>
     <h1 class="watch">尛焱</h1>
-    <button onclick="ffff()">omgomg</button>
+    <button onclick="btn_1()">omgomg</button>
     <!-- onclick當點擊按鈕，將會觸發onlick的function -->
 
 
 
     <script>
-        // var watch_01;
-        // //宣告一個變數為wath_01
-        // watch_01 = document.querySelector(".watch");
-        // // 將watch_01的變數套用為".watch"
-        // watch_01.textContent = "what";
-        // //watch01的文字轉變為WHAT.
-        function ffff(){
-            //函數宣告 ffff的數值
+        function btn_1() {
+            //函數宣告 btn_1的數值
             var btn;
+            //宣告btn
             btn = document.querySelector(".watch");
-            btn.textContent = "what";
+            //btn 元素設為.watch的
+            var text = btn.textContent;
+            //宣告text為btn.的內文(textContent)
+            if (text == "尛焱") {
+                //如果text(內文)是尛焱就把文字改為what
+                btn.textContent = "what";
+            } else {
+                //否則文字改成尛焱
+                btn.textContent = "尛焱";
+            }
         }
     </script>
 

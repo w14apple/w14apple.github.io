@@ -5,7 +5,7 @@
     margin: 0 auto;
 }
 body{
-    background-image: url(../img/bg_page.jpg);
+    background-image: url(./img/bg_page.jpg);
     background-position: center;
 }
 
@@ -23,12 +23,12 @@ body{
     align-items: center;
 } */
 .swiper-container .swiper-wrapper .pic01 {
-    background-image: url(../img/01.jpg);
+    background-image: url(./img/01.jpg);
     background-size: cover;
     background-position: center;
 }
 .swiper-container .swiper-wrapper .pic02 {
-    background-image: url(../img/02.jpg);
+    background-image: url(./img/02.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -50,8 +50,8 @@ body{
     width: 100%;
     height: 100%;
     /* background-image: url(/img/top.png); */
-    background: url(../img/top.png) no-repeat center 0, 
-                url(../img/bottom.png) no-repeat center bottom;
+    background: url(./img/top.png) no-repeat center 0, 
+                url(./img/bottom.png) no-repeat center bottom;
     position: absolute;
     /* background-repeat: no-repeat;
     background-position: center 0; */
@@ -101,7 +101,7 @@ h2{
     width: 50%;
     height: 100%;
     background-color: aqua;
-    background-image: url(../img/01.jpg);
+    background-image: url(./img/01.jpg);
     background-position: center;
     background-size: cover;
     float: left;
@@ -124,7 +124,7 @@ h2{
     width: 50%;
     height: 100%;
     background-color: chocolate;
-    background-image: url(../img/02.jpg);
+    background-image: url(./img/02.jpg);
     background-size: cover;
     background-position: right;
     float: left;
@@ -159,7 +159,7 @@ h2{
 }
 #all .environment .environment-text .environment-btn{
     width: 100%;
-    height: 30px;
+    height: 40px;
     list-style: none;
     text-align: center;
     position: absolute;
@@ -171,7 +171,6 @@ h2{
     height: 30px;
     background-color:gray;
     float: left;
-    padding-top: 10px;
     border-radius: 10%;
 }
 #all .environment .environment-text .environment-btn .environment-btn1, #all .environment .environment-text .environment-btn .environment-btn2, #all .environment .environment-text .environment-btn .environment-btn3, #all .environment .environment-text .environment-btn .environment-btn4{
@@ -184,7 +183,7 @@ h2{
     position: absolute;
     top: 10%;
     right: calc(10% - 10px);
-    background-image:url(../img/07.jpg);
+    background-image:url(./img/07.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 10%;
@@ -194,8 +193,8 @@ h2{
     display: block;
     width: 100%;
     height: 100%;
-    background: url(../img/top-O.png) no-repeat center 0, 
-                url(../img/bottom-O.png) no-repeat center bottom;
+    background: url(./img/top-O.png) no-repeat center 0, 
+                url(./img/bottom-O.png) no-repeat center bottom;
     position: absolute;
 }
 #all .hunter .hunter-title {
@@ -218,7 +217,7 @@ h2{
     position: absolute;
     top: 30%;
     left: 10%;
-    background-image: url(../img/mainvisual.png);
+    background-image: url(./img/mainvisual.png);
     background-size: cover;
 }
 
@@ -240,7 +239,7 @@ h2{
     position: absolute;
     top: 10%;
     left: calc(10% - 10px);
-    background-image: url(../img/boat.jpg);
+    background-image: url(./img/boat.jpg);
     background-size: cover;
     border-radius: 10%;
 }
@@ -308,11 +307,11 @@ h2{
    margin-right:40px; 
 }
 #footer .footer-btn .footer-btn1{
-    background-image: url(../img/icon_facebook.svg)
+    background-image: url(./img/icon_facebook.svg)
 }
 #footer .footer-btn .footer-btn2{
-    background-image: url(../img/icon_instagram.svg)
+    background-image: url(./img/icon_instagram.svg)
 }
 #footer .footer-btn .footer-btn3{
-    background-image: url(../img/icon_youtube.svg)
+    background-image: url(./img/icon_youtube.svg)
 }
