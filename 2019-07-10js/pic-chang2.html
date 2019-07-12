@@ -35,14 +35,33 @@
         li img {
             width: 100%;
         }
+
+        .show {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
     <div id="all">
         <div class="big">
-            <img class="screen" src="https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555388152/shape/mentalfloss/istock_000023765401_small.jpg"
-                alt="owl">
+
+            <img class="show" id="pic_A"
+                src="https://www.telegraph.co.uk/content/dam/science/2016/04/22/owl_trans_NvBQzQNjv4Bq90JsMauqkzRhOnTEP_rlOs_QsxY3o7kjqRst5DDPB4c.jpg?imwidth=450"
+                alt="">
+            <img class="hidden" id="pic_B"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJoqd74as_DBI74XWMuZug0cwHvmjNSpK1p93ynfVIeinpyy4PPA"
+                alt="">
+            <img class="hidden" id="pic_C"
+                src="https://www.icreatedaily.com/wp-content/uploads/2018/08/grumpy-night-owl-1024x682.jpg" alt="">
+            <img class="hidden" id="pic_D"
+                src="https://i.cbc.ca/1.5148526.1558715385!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/great-horned-owl-chick-that-fell-from-headingley-nest.jpg"
+                alt="">
+
         </div>
         <ul>
             <li class="btn btn1">
@@ -67,37 +86,47 @@
         </ul>
     </div>
 
-
-
     <script>
         var pic_A = document.querySelector(".picA");
         var pic_B = document.querySelector(".picB");
         var pic_C = document.querySelector(".picC");
         var pic_D = document.querySelector(".picD");
-        var screen = document.querySelector(".screen")
-        console.log(screen);
-        
+
+        var top_pic_A = document.querySelector("#pic_A");
+        var top_pic_B = document.querySelector("#pic_B");
+        var top_pic_C = document.querySelector("#pic_C");
+        var top_pic_D = document.querySelector("#pic_D");
+
         pic_A.onclick = function () {
-            console.log(pic_A);
-            screen.src = "https://www.telegraph.co.uk/content/dam/science/2016/04/22/owl_trans_NvBQzQNjv4Bq90JsMauqkzRhOnTEP_rlOs_QsxY3o7kjqRst5DDPB4c.jpg?imwidth=450";
+            hiddenall();
+            top_pic_A.classList.add("show");
+            top_pic_A.classList.remove("hidden");
         }
         pic_B.onclick = function () {
-            console.log(pic_B);
-            screen.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJoqd74as_DBI74XWMuZug0cwHvmjNSpK1p93ynfVIeinpyy4PPA"
+            hiddenall();
+            top_pic_B.classList.add("show");
+            top_pic_B.classList.remove("hidden");
         }
         pic_C.onclick = function () {
-            console.log(pic_C);
-            screen.src = "https://www.icreatedaily.com/wp-content/uploads/2018/08/grumpy-night-owl-1024x682.jpg"
+            hiddenall();
+            top_pic_C.classList.add("show");
+            top_pic_C.classList.remove("hidden");
         }
-        
         pic_D.onclick = function () {
-            console.log(pic_D);
-            screen.src = "https://i.cbc.ca/1.5148526.1558715385!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/great-horned-owl-chick-that-fell-from-headingley-nest.jpg"
+            hiddenall();
+            top_pic_D.classList.add("show");
+            top_pic_D.classList.remove("hidden");
         }
-        
-
-
-
+        function hiddenall() {
+            top_pic_A.classList.remove("show");
+            top_pic_B.classList.remove("show");
+            top_pic_C.classList.remove("show");
+            top_pic_D.classList.remove("show");
+            top_pic_A.classList.add("hidden");
+            top_pic_B.classList.add("hidden");
+            top_pic_C.classList.add("hidden");
+            top_pic_D.classList.add("hidden");
+        }
     </script>
 </body>
 
