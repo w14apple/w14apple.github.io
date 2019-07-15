@@ -16,14 +16,14 @@
         #tab-all {
             width: 400px;
             height: 30px;
-            margin:  0 auto;
+            margin: 0 auto;
         }
 
-        #tab {
+        .tab {
             width: 100px;
             height: 30px;
-            background-color:blue;
-            border-radius:30% 30% 0 0; 
+            background-color: blue;
+            border-radius: 30% 30% 0 0;
             text-align: center;
             color: white;
             float: left;
@@ -31,49 +31,47 @@
             position: relative;
 
         }
-        #show-btm1, #show-btm2, #show-btm3{
+
+        #show-btm1,
+        #show-btm2,
+        #show-btm3 {
             width: 100%;
             height: 4px;
             position: absolute;
             bottom: 0;
         }
-        #contant1{
-            background-image: url(01.jpg);
-            background-size: cover;
-            background-position: center;
-            
-        }
-        #contant2{
-            
-        }
-        #contant3{
-            
-        }
-        .tab-show{
+
+        .tab-show {
             display: block;
             background-color: yellow;
         }
-        .tab-hidden{
+
+        .tab-hidden {
             display: none;
         }
+
         #contant-all {
             width: 100%;
             height: 300px;
             background-color: gray;
-            margin:  0 auto
-            
+            margin: 0 auto
         }
-        #contant1, #contant2, #contant3{
+
+        #contant1,
+        #contant2,
+        #contant3 {
             width: 100%;
         }
-        .contant-show{
+
+        .contant-show {
             width: 100%;
             height: 100%;
             display: block;
             background-color: blueviolet;
             color: white;
         }
-        .contant-hidden{
+
+        .contant-hidden {
             display: none;
         }
     </style>
@@ -81,98 +79,131 @@
 
 <body>
     <div id="tab-all">
-        <div class="tab1" id="tab">Tab1
+        <div class="tab" id="tab1">Tab1
             <div class="tab-show" id="show-btm1"></div>
         </div>
-        <div class="tab2" id="tab">Tab2
+        <div class="tab" id="tab2">Tab2
             <div class="tab-hidden" id="show-btm2"></div>
         </div>
-        <div class="tab3" id="tab">Tab3
+        <div class="tab" id="tab3">Tab3
             <div class="tab-hidden" id="show-btm3"></div>
         </div>
+        
     </div>
     <div id="contant-all">
-        <div class="contant-show" id="contant1">123</div>
-        <div class="contant-hidden" id="contant2">45565</div>
-        <div class="contant-hidden" id="contant3">89</div>
+        <div class="contant-show contant">123</div>
+        <div class="contant-hidden contant">45565</div>
+        <div class="contant-hidden contant">89</div>
     </div>
 
 
     <script>
-        var tab_1 =document.querySelector(".tab1")
-        var tab_2 =document.querySelector(".tab2")
-        var tab_3 =document.querySelector(".tab3")
+        // var tab_1 =document.querySelector(".tab1")
+        // var tab_2 =document.querySelector(".tab2")
+        // var tab_3 =document.querySelector(".tab3")
 
-        var btm_1 =document.querySelector("#show-btm1")
-        var btm_2 =document.querySelector("#show-btm2")
-        var btm_3 =document.querySelector("#show-btm3")
+        // var btm_1 =document.querySelector("#show-btm1")
+        // var btm_2 =document.querySelector("#show-btm2")
+        // var btm_3 =document.querySelector("#show-btm3")
+
+        // var contant_1=document.querySelector("#contant1")
+        // var contant_2=document.querySelector("#contant2")
+        // var contant_3=document.querySelector("#contant3")
+
+        // var text_1=document.querySelector(id="text1")
+        // var text_2=document.querySelector(id="text2")
+        // var text_3=document.querySelector(id="text3")
+
+
+        var btns_ary = document.querySelectorAll(".tab");
         
-        var contant_1=document.querySelector("#contant1")
-        var contant_2=document.querySelector("#contant2")
-        var contant_3=document.querySelector("#contant3")
+        //宣告btn_ary為 div.tab
+        var contants_ary = document.querySelectorAll(".contant");
+        for (let i = 0; i < btns_ary.length; i++) {
+            //宣告i 起始為0,i 小於宣告好的btns_ary.length的長度(length), i++=i+1
+            const btn = btns_ary[i];
+            //宣告 btn 為btns_ary[i]裡的全部
+            const contant = contants_ary[i];
 
-        var text_1=document.querySelector(id="text1")
-        var text_2=document.querySelector(id="text2")
-        var text_3=document.querySelector(id="text3")
-
-        tab_1.onclick = function(){
-            hidden_all();
-            contant_1.classList.add("contant-show");
-            contant_1.classList.remove("contant-hidden");
-            
-            btm_1.classList.add("tab-show")
-            btm_1.classList.remove("tab-hidden")
-
-
-
-
-
-        }
-        tab_2.onclick = function(){
-            hidden_all();
-            contant_2.classList.add("contant-show");
-            contant_2.classList.remove("contant-hidden");
-
-            btm_2.classList.add("tab-show")
-            btm_2.classList.remove("tab-hidden")
-
-
-
-
-
-        }
-        tab_3.onclick = function(){
-            hidden_all();
-            contant_3.classList.add("contant-show");
-            contant_3.classList.remove("contant-hidden");
-           
-            btm_3.classList.add("tab-show")
-            btm_3.classList.remove("tab-hidden")
-
-
-
-
+            btn.onclick = function () {
+            //按鈕按下btn時的函數
+                hidden_all();
+                //隱藏所有東西
+                contant.classList.add("contant-show");
+                contant.classList.remove("contant-hidden");
+            }
         }
 
-        function hidden_all(){
-            
-            btm_1.classList.remove("tab-show")
-            btm_1.classList.add("tab-hidden")
-            btm_2.classList.remove("tab-show")
-            btm_2.classList.add("tab-hidden")
-            btm_3.classList.remove("tab-show")
-            btm_3.classList.add("tab-hidden")
+        function hidden_all() {
+        //宣告一個函數 為hidden_all
+            for (let index = 0; index < contants_ary.length; index++) {
+                //for迴圈 宣告index 為0 ,小於contants_ary.length的長度(lenght), index++=index+1
+                const contant = contants_ary[index];
+                //宣告 contant 為 contants_ary的index
 
+                contant.classList.remove("contant-show");
+                //移除所選的contant的class(contant-show)
+                contant.classList.add("contant-hidden");
+                //增加所選的contant的class(contant-hidden)
 
-            contant_1.classList.remove("contant-show");
-            contant_1.classList.add("contant-hidden");
-            contant_2.classList.remove("contant-show");
-            contant_2.classList.add("contant-hidden");
-            contant_3.classList.remove("contant-show");
-            contant_3.classList.add("contant-hidden");
-
-
+            }
         }
+        // tab_1.onclick = function(){
+        //     hidden_all();
+        //     contant_1.classList.add("contant-show");
+        //     contant_1.classList.remove("contant-hidden");
+
+        //     btm_1.classList.add("tab-show")
+        //     btm_1.classList.remove("tab-hidden")
+
+
+
+
+
+        // }
+        // tab_2.onclick = function(){
+        //     hidden_all();
+        //     contant_2.classList.add("contant-show");
+        //     contant_2.classList.remove("contant-hidden");
+
+        //     btm_2.classList.add("tab-show");
+        //     btm_2.classList.remove("tab-hidden");
+
+
+
+        // }
+        // tab_3.onclick = function(){
+        //     hidden_all();
+        //     contant_3.classList.add("contant-show");
+        //     contant_3.classList.remove("contant-hidden");
+
+        //     btm_3.classList.add("tab-show");
+        //     btm_3.classList.remove("tab-hidden");
+
+
+
+
+        // }
+
+        // function hidden_all(){
+
+        //     btm_1.classList.remove("tab-show");
+        //     btm_1.classList.add("tab-hidden");
+        //     btm_2.classList.remove("tab-show");
+        //     btm_2.classList.add("tab-hidden");
+        //     btm_3.classList.remove("tab-show");
+        //     btm_3.classList.add("tab-hidden");
+
+
+        //     contant_1.classList.remove("contant-show");
+        //     contant_1.classList.add("contant-hidden");
+        //     contant_2.classList.remove("contant-show");
+        //     contant_2.classList.add("contant-hidden");
+        //     contant_3.classList.remove("contant-show");
+        //     contant_3.classList.add("contant-hidden");
+
+
+        // }
 
     </script>
 

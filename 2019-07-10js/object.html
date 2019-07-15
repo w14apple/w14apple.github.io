@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    .all {
+        width: 600px;
+    }
+
+    #img {
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="all">
+        <!-- <div id="image">
+        <img id="img" src="" alt="">
+    </div>
+    <div id="contant">
+        <h1 id="title"></h1>
+        <p id="text"></p>
+    </div> -->
+    </div>
+
+
+
+    <script>
+        var backpack = {
+            image: "https://shop.samsonite.com/dw/image/v2/AAUE_PRD/on/demandware.static/-/Sites-product-catalog/default/dw918ea7b0/collections/_samsonite/ubx/500x500/1030781050be01.jpg?sw=1500",
+            title: "我的背包",
+            pen: 5,
+            book: 3,
+            candy: "巧克力",
+            money: 200,
+            phone: "sony"
+        }
+        // console.log(backpack.candy);
+
+
+        // var img = document.querySelector("#img");
+        // var title = document.querySelector("#title");
+        // var text = document.querySelector("#text");
+        var all = document.querySelector(".all");
+
+        // img.src = backpack.image;
+        // title.innerHTML = `<div style="color:red">${backpack.title}</div>`;
+        // text.innerHTML = `"我有一個"${backpack.candy}+"呵呵"`;
+
+        all.innerHTML =
+         //反引號是簡化上面多餘的+or-  innerHTML  inner是塞入HTML裡面
+         `
+        <div id="image">
+            <img src="${backpack.image}" alt="">
+        </div>
+        <div id="contant">
+            <h1 id="title">${backpack.title}</h1>
+            <p id="text">${backpack.phone}</p>
+        </div>
+        `
+
+
+    </script>
+</body>
+
+</html>
