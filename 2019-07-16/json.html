@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0 auto;
+    }
+
+    .all {
+        width: 30%;
+        height: 600px;
+        background-color: skyblue;
+        border-radius: 20%;
+        overflow: hidden;
+    }
+
+    .date {
+        width: 100%;
+        height: 30px;
+        background-color: skyblue;
+        text-align: center;
+        opacity: 0.5;
+        font-size: 20px;
+    }
+
+    .title {
+        width: 100%;
+        height: 220px;
+        background-image: url(/img/03.jpg);
+        background-size: cover;
+        background-position: bottom;
+        position: relative;
+        border-radius: 30px;
+    }
+
+    .title-text {
+        position: absolute;
+        right: 20px;
+        bottom: 0;
+        font-size: 30px;
+    }
+
+    .temp {
+        width: 100%;
+        height: 225px;
+        text-align: center;
+        padding-top: 125px;
+        background-image: url(/img/04.jpg);
+        background-size: cover;
+        background-position: left;
+        font-size: 40px;
+        border-radius: 30px;
+    }
+
+    @keyframes aminated {
+        0% {}
+
+        50% {}
+
+        100% {}
+    }
+</style>
+
+<body>
+    <div class="all">
+        <div class="date">
+            <h3></h3>
+        </div>
+        <div class="title">
+            <h2 class="title-text"></h2>
+        </div>
+        <div class="temp">
+            <h2></h2>
+
+        </div>
+
+        
+    </div> 
+    <select id="select" name="" id="">
+
+        </select>
+
+
+    <script>
+
+
+        fetch('https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-D0047-091?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D&format=JSON')
+            .then(function (response) {
+                return response.json();
+                //可以改成 var myJson = response.json();
+            })
+            .then(function (myJson) {
+                // console.log( myJson.cwbopendata.dataset.locations.location);
+                var location = myJson.cwbopendata.dataset.locations.location;
+                // console.log(location[5].weatherElement[12].time[0].elementValue[0].value);
+                var weather = location[5].weatherElement[12].time[0].elementValue[0].value //天氣狀況
+                // console.log(location[5].weatherElement[0].time[0].elementValue.value);
+                var temp = location[5].weatherElement[0].time[0].elementValue.value;   //平均溫度
+                // console.log(location[5].weatherElement[5].time[0].elementValue.value);
+                var MaxAT = location[5].weatherElement[5].time[0].elementValue.value;  //最高體感
+
+
+                var title = document.querySelector(".title");
+
+                var temp_number = document.querySelector(".temp");
+
+                var date = document.querySelector(".date")
+
+                var select = document.querySelector("#select")
+
+                title.innerHTML = `
+
+                <h2 style class="title-text">${weather}</h2>
+
+                `
+                temp_number.innerHTML = `
+                
+                <h1>${temp}°C</h1><span>體感${MaxAT}°C</span>
+
+                `
+                date.innerHTML = `
+                
+                <h3>Today</h3>
+                
+                `
+                
+
+                for (let index = 0; index < location.length; index++) {
+                    const select_all = location[index];
+                    
+                }
+            });
+
+    </script>
+</body>
+
+</html>
