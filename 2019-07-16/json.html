@@ -11,6 +11,8 @@
 <style>
     * {
         margin: 0 auto;
+        transition-duration: 0.5s;
+        transition-delay: 0.5s
     }
 
     .all {
@@ -33,9 +35,9 @@
     .title {
         width: 100%;
         height: 220px;
-        background-image: url(/img/03.jpg);
+        background-image: url(/img/07.png);
         background-size: cover;
-        background-position: bottom;
+        background-position: center;    
         position: relative;
         border-radius: 30px;
     }
@@ -52,19 +54,29 @@
         height: 225px;
         text-align: center;
         padding-top: 125px;
-        background-image: url(/img/04.jpg);
+        background-image: url(/img/08.png);
         background-size: cover;
         background-position: left;
         font-size: 40px;
         border-radius: 30px;
     }
+    h2{
+        
+        animation-name: animated01 3s inherit;
+    }
 
-    @keyframes aminated {
-        0% {}
+    @keyframes animated01 {
+        0% {
+            opacity: 1;
+        }
 
-        50% {}
+        50% {
+            opacity: 0;
+        }
 
-        100% {}
+        100% {
+            opacity: 1;
+        }
     }
 </style>
 
@@ -131,16 +143,21 @@
                 
                 `
 
-
+                //使用for迴圈找到所有縣市
                 for (let index = 0; index < location.length; index++) {
                     const location_all = location[index];
-                    console.log(location_all.locationName);
+                    // console.log(location_all.locationName);
 
+                    // +=　會累計素質上去
                     select.innerHTML += `
+                    
                     <option value="${location_all.locationName}">${location_all.locationName}</option>
                     `
-                    
+                    //onchange 改變素質
+                    select.onchange = function(){
+                        
 
+                    }
                 }
             });
 
