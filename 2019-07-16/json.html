@@ -81,11 +81,11 @@
 
         </div>
 
-        
-    </div> 
-    <select id="select" name="" id="">
 
-        </select>
+    </div>
+    <select id="select" name="" id="">
+        <!-- <option value="">123</option> -->
+    </select>
 
 
     <script>
@@ -130,11 +130,17 @@
                 <h3>Today</h3>
                 
                 `
-                
+
 
                 for (let index = 0; index < location.length; index++) {
-                    const select_all = location[index];
+                    const location_all = location[index];
+                    console.log(location_all.locationName);
+
+                    select.innerHTML += `
+                    <option value="${location_all.locationName}">${location_all.locationName}</option>
+                    `
                     
+
                 }
             });
 
