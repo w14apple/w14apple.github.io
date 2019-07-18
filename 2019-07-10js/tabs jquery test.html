@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            background-color: black;
+            transition-duration: 0.5s;
+        }
+
+        #tab-all {
+            width: 400px;
+            height: 30px;
+            margin: 0 auto;
+        }
+
+        .tab {
+            width: 100px;
+            height: 30px;
+            background-color: blue;
+            border-radius: 30% 30% 0 0;
+            text-align: center;
+            color: white;
+            float: left;
+            margin-right: 30px;
+            position: relative;
+
+        }
+
+        /* #show-btm1,
+        #show-btm2,
+        #show-btm3 {
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            bottom: 0;
+        } */
+
+        /* .tab-show {
+            display: block;
+            background-color: yellow;
+        } */
+
+        .tab-hidden {
+            display: none;
+        }
+
+        #contant-all {
+            width: 100%;
+            height: 300px;
+            background-color: gray;
+            margin: 0 auto
+        }
+
+        #contant1,
+        #contant2,
+        #contant3 {
+            width: 100%;
+        }
+
+        .contant {
+            display: none;
+        }
+
+        .contant.show {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tab-all">
+        <div class="tab" data-tabid="01">Tab1
+            <!-- <div class="tab-show" id="show-btm1"></div> -->
+        </div>
+        <div class="tab" data-tabid="02">Tab2
+            <!-- <div class="tab-hidden" id="show-btm2"></div> -->
+        </div>
+        <div class="tab" data-tabid="03">Tab3
+            <!-- <div class="tab-hidden" id="show-btm3"></div> -->
+        </div>
+
+    </div>
+    <div id="contant-all">
+        <div class="contant show" data-tabid="01">123</div>
+        <div class="contant" data-tabid="02">45565</div>
+        <div class="contant" data-tabid="03">89</div>
+        <!-- data-tabid 需要有相對應的才會顯示 tab和contant -->
+    </div>
+
+    <script src="/jquery-3.4.1.min.js"></script>
+    <!-- 抓取JQ的東西 -->
+    <script>
+        $(".tab").click(function () {
+            var tabid =this.dataset.tabid;
+            $(".contant").removeClass("show");
+            $(".contant[data-tabid="+tabid+"]").addClass("show")
+            
+
+        });
+            //設立按鈕事件
+
+            //宣告tabid 為 this為點選的物件的data的set的tabid  this已經為tab上面的3個按鈕了
+
+            //JQ宣告.contant 移除class的show
+
+            //.contant裡面的data-tabid的tabid(已經選好第幾個了) 增加class show
+
+    </script>
+
+</body>
+
+</html>

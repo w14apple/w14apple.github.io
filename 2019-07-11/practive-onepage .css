@@ -315,3 +315,17 @@ h2{
 #footer .footer-btn .footer-btn3{
     background-image: url(./img/icon_youtube.svg)
 }
+
+.home{
+    display: none;
+}
+.home.show{
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: block;
+    z-index: 99999;
+}

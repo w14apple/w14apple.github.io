@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 class="hihi">11 </h2>
+    <h2 class="hihi">22 </h2>
+    <h2 class="hihi">33 </h2>
+    <h2 class="hihi">44 </h2>
+
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script>
+        // var test=document.querySelector("h2");
+        // var test_All=document.querySelectorAll("h2");
+
+        var test_jq = $(".hihi");
+        // 使用到JQ時候 選擇器寫法會變成$("")
+
+        test_jq.click(function () {
+            // 函數事件將改為 宣告的名稱.事件(function (){});
+            console.log(this);
+            
+            $(this).removeClass("hihi");
+            //this 為選擇到你選擇的東西上
+            
+            // this.classList.add("hihihi");
+            //盡量不要在JQ裡面再寫一個JS的程式碼 盡量都用JQ來寫
+
+
+
+
+
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
