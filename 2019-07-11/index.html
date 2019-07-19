@@ -8,6 +8,7 @@
     <title>One-page</title>
     <link rel="stylesheet" href="swiper.min.css">
     <link rel="stylesheet" href="practive-onepage .css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -28,7 +29,7 @@
         </ul>
     </nav>
     <div class="block introduction" id="introduction">
-        <div class="introduction-L">
+        <div class="introduction-L" data-aos="zoom-in-right" data-aos-duration="1500">
             <div class="introduction-L-text">
                 <h2 class="introduction-h2">
                     概要
@@ -38,10 +39,10 @@
                     <p>玩家化身成獵人, 接受任務狩獵生活棲息在各種環境中的魔物。
                         利用狩獵魔物取得的材料, 製作更強的武器和防具, 挑戰更強大的魔物。
                     </p>
-                </samp>
+                </samp>授權
             </div>
         </div>
-        <div class="introduction-R">
+        <div class="introduction-R" data-aos="zoom-in-left" data-aos-duration="2000">
             <div class="introduction-R-text">
                 <h2 class="introduction-h2">
                     故事
@@ -127,7 +128,14 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="swiper.min.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+
     <script>
         var swiper = new Swiper('.swiper-container', {
             pagination: {
@@ -155,11 +163,11 @@
             }, 500);
 
             // $('html, body').animate({
-                //回到最上 選到html body裡面才有scrollTop的函數animate
+            //回到最上 選到html body裡面才有scrollTop的函數animate
             //     scrollTop: $('.js-section').offset().top
             console.log($('.survey-text3').offset());
-            
-                //scrollTop回到最上 如果是0直接到最上面  $("")指定到某個東西的座標[offset()]
+
+            //scrollTop回到最上 如果是0直接到最上面  $("")指定到某個東西的座標[offset()]
             // }, 200);
 
         });
