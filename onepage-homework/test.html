@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href=".\node_modules\swiper\dist\css\swiper.css">
+    <link rel="stylesheet" href=".\node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <style>
+        .img {
+            width: 100%;
+            height: 400px;
+            background-position: center;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: red;
+        }
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+            width: 50px;
+            height: 50px;
+            background-image: url("https://images-na.ssl-images-amazon.com/images/I/71nYSlHvbjL._SX425_.jpg");
+        }
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+            background-image: url("https://ih1.redbubble.net/image.445130512.1102/poster,840x830,f8f8f8-pad,750x1000,f8f8f8.jpg");
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="img" style="background-image: url('https://s.zimedia.com.tw/s/2pXhZQ-1')">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img"
+                    style="background-image: url('https://fpscdn.yam.com/MjUzODcwNjl3b3JsZA==/b7d537ad696d6d53.jpg')">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img"
+                    style="background-image: url('http://n.sinaimg.cn/sinacn20111/57/w429h428/20190215/3286-htacqwv1579239.png')">
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div style="background-color: cyan">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit sit expedita aut delectus,
+                    cupiditate
+                    ratione facere eveniet. Accusamus
+                    unde consequuntur enim quos! Modi obcaecati a quae atque quibusdam omnis expedita!
+                </div>
+                <div class="col-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et possimus nihil perspiciatis impedit
+                    soluta
+                    ut adipisci deleniti explicabo ea reprehenderit! Cum fugit voluptate voluptas iusto quasi ex esse
+                    sint
+                    consectetur!
+                </div>
+                <div class="col-sm">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ipsam quas magnam autem suscipit
+                    doloremque deserunt minus corporis? Iste similique, sequi neque sit facilis laudantium aut tempore
+                    suscipit magni. Dignissimos.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src=".\node_modules\jquery\dist\jquery.min.js"></script>
+
+    <script src=".\node_modules\swiper\dist\js\swiper.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src=".\node_modules\bootstrap\dist\js\bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
