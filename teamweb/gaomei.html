@@ -11,14 +11,159 @@
     <!--bootstrap-->
 
     <style>
+        * h1 {
+            font-size: 50px;
+            font-family: 微軟正黑體;
+            margin: 0;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+            font-family: 微軟正黑體;
+        }
+
+        .nav-container {
+            height: 200px;
+            flex:fix;
+        }
+
+        @media (min-width: 1600px) {
+            .container.nav-container {
+                max-width: 1200px;
+            }
+        }
+
+        .nav-tltle {
+            margin-right: 100px;
+        }
+
+        .en-container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .en-pic {
+            width: 600px;
+            height: 600px;
+            background-image: url(02.jpg);
+            margin-top: calc(50vh - 300px);
+        }
+
+        .en-text {
+            width: 600px;
+            height: 600px;
+            background-color: red;
+            margin-top: calc(50vh - 300px);
+        }
+
+        .his-container {
+            width: 100%;
+            height: 200vh;
+            background-color: aquamarine
+        }
+
+        .his-title {
+            height: 20vh;
+            background-color: brown;
+        }
+
+        .his-text {
+            height: 180vh;
+            background-color: blueviolet;
+        }
+
+        .his-pic {
+            background-color: gray;
+        }
+
+        .na-container {
+            width: 100%;
+            height: 100vh;
+            background-image: url(02.jpg);
+            color: white;
+            text-align: center;
+        }
+
+        .na-title {
+            padding-top: calc(50vh - 72px);
+            margin-bottom: 90px;
+        }
     </style>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container nav-container">
+            <a class="navbar-brand" href="#">
+                <h1>高美濕地</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">
+                            <h2 class="nav-tltle">關於高美</h2> <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">
+                            <h2 class="nav-tltle">高美景觀</h2> <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">
+                            <h2 class="nav-tltle">高美生態</h2> <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">
+                            <h2>環境價值</h2> <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
 
+                </ul>
 
- 
+            </div>
+        </div>
+    </nav>
+
+    <!--NAVBAR-->
+
+    <div class="container en-container">
+
+        <div class="en-pic">
+            One of three columns
+        </div>
+        <div class="en-text">
+            One of three columns
+        </div>
+    </div>
+
+    <!--濕地環境-->
+
+    <div class="container-fluid his-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 his-title">21</div>
+                <div class="col-8 his-text">21</div>
+                <div class="col-4 his-pic">12</div>
+            </div>
+        </div>
+    </div>
+    <!--人文歷史-->
+    <div class="container-fluid na-container">
+        <h1 class="na-title ">自然景觀</h1>
+        <h2 class="na-title1 mb-3">日出/日落</h2>
+        <h2 class="na-title1 mb-3">潮汐</h2>
+        <h2 class="na-title1">生態</h2>
+    </div>
+    <!--自然景觀-->
 
 
 
