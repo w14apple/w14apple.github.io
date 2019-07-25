@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>高美濕地</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -35,16 +35,13 @@
                 max-width: 1200px;
             }
         } */
-        /* .nav-container{
-            padding: 70px 0;
-        } */
         .nav-tltle {
             margin-right: 80px;
         }
 
         .en {
             background-color: gray;
-            
+
         }
 
         .en-container {
@@ -61,8 +58,8 @@
         .en-text {
             width: 600px;
             height: 600px;
-            background-color: red;
-            padding: 30px;
+            background-color: brown;
+            padding: 150px 30px 0 30px;
         }
 
         .his-container {
@@ -82,7 +79,7 @@
             line-height: 180px;
         }
 
-        .his-pic {
+        .his-text .his-pic {
             background-color: yellow;
         }
 
@@ -90,18 +87,18 @@
             position: relative;
         }
 
-        .col-12:nth-child(2n+1) {
+        .his-img:nth-child(2n+1) {
             display: flex;
             justify-content: flex-start;
         }
 
-        .col-12:nth-child(2n) {
+        .his-img:nth-child(2n) {
             display: flex;
             justify-content: flex-end;
 
         }
 
-        .col-12:nth-child(2n+1) .his-pic-circle::after {
+        .his-img:nth-child(2n+1) .his-pic-circle::after {
             content: "";
             width: 20px;
             height: 20px;
@@ -111,7 +108,7 @@
             background-color: red;
         }
 
-        .col-12:nth-child(2n) .his-pic-circle::after {
+        .his-img:nth-child(2n) .his-pic-circle::after {
             content: "";
             width: 20px;
             height: 20px;
@@ -121,11 +118,14 @@
             background-color: red;
         }
 
-
         .his-pic-circle-img {
             width: 180px;
             height: 180px;
             border-radius: 50%;
+        }
+
+        .na {
+            background-color: cadetblue;
         }
 
         .na-container {
@@ -133,36 +133,54 @@
             background-color: gray;
             color: white;
             text-align: center;
+            padding: 407px 0;
         }
 
         .na-title {
             margin-bottom: 90px;
         }
 
+        .made {
+            background-color: blueviolet;
+        }
+
         .made-container {
+            padding: 30px, 0;
             width: 100%;
             background-color: aquamarine;
         }
 
         .made-title {
-            width: 100%;
-            height: 200px;
+            padding: 70px 0;
             background-color: brown;
+            text-align: center;
         }
 
         .made-same-pic {
+            width: 100%;
+            height: 600px;
+            /* 需要更改的地方------------------------------------------------- */
             background-color: gray;
             margin-bottom: 110px;
             background-image: url(02.jpg);
         }
 
+        .made-same-text {
+            padding: 180px 30px 0 30px;
+            text-align: center;
+        }
+
         .btn-pic {
-            margin-bottom: 0;
+            margin-bottom: 200px;
         }
 
         .com-container {
             width: 100%;
-            padding: 0;
+        }
+
+        .com-title {
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
@@ -212,8 +230,8 @@
             <div class="en-pic">
             </div>
             <div class="en-text">
-                <h1>濕地環境</h1>
-                <h2>濕地成因</h2>
+                <h1 class="mb-4">濕地環境</h1>
+                <h2 class="mb-4">濕地成因</h2>
                 <h3>台中港興建後，為避免大甲溪河砂大量流入港口造成淤積，
                     在台中港北防風林北岸興建攔砂堤，卻造成高美海水浴場泥沙日漸淤積，
                     這些淤砂經過長期的自然演替形成多元棲地型態，孕育了豐富的生態資源。
@@ -238,66 +256,63 @@
                         <h2>2004 臺中縣政府公告設立高美野生動物保護區</h2>
                         <h2>2005 海渡發電廠因周遭居民抗爭放棄承租土地</h2>
                         <h2>2007 內政部營建署將高美濕地列為國家級濕地</h2>
-                        <h2>2012 台中市政府公告高美野生動物保護區分區範圍，
+                        <h2 class="none-linehight">2012 台中市政府公告高美野生動物保護區分區範圍，
                             將保護區規劃為核心區、緩衝區及永續利用區</h2>
                         <h2>2014 設置木棧道</h2>
                         <h2>2016 景觀斜張橋落成</h2>
                     </div>
                     <div class="col-5 his-pic">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-12 his-img">
                                 <div class="his-pic-circle">
                                     <img class="his-pic-circle-img" src="02.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 his-img">
                                 <div class="his-pic-circle">
                                     <img class="his-pic-circle-img" src="02.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 his-img">
                                 <div class="his-pic-circle">
                                     <img class="his-pic-circle-img" src="02.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 his-img">
                                 <div class="his-pic-circle">
                                     <img class="his-pic-circle-img" src="02.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 his-img">
                                 <div class="his-pic-circle">
                                     <img class="his-pic-circle-img" src="02.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 his-img">
                                 <div class="his-pic-circle">
                                     <img class="his-pic-circle-img" src="02.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 his-img">
                                 <div class="his-pic-circle">
                                     <img class="his-pic-circle-img" src="02.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 his-img">
                                 <div class="his-pic-circle">
                                     <img class="his-pic-circle-img" src="02.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 his-img">
                                 <div class="his-pic-circle">
                                     <img class="his-pic-circle-img" src="02.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 his-img">
                                 <div class="his-pic-circle">
                                     <img class="his-pic-circle-img" src="02.jpg" alt="">
                                 </div>
                             </div>
-
-
-                            <div></div>
                         </div>
                     </div>
                 </div>
@@ -317,25 +332,57 @@
     <section class="made">
         <div class="container made-container">
             <div class="row">
-                <div class="col-12 made-title">人造景觀</div>
+                <div class="col made-title">
+                    <h1>人造景觀</h1>
+                </div>
             </div>
             <div class="row">
-                <div class="col-6 top-pic made-same-pic">pic</div>
-                <div class="col-6 top-text made-same">123</div>
+                <div class="col-6 top-pic made-same-pic"></div>
+                <div class="col-6 top-text made-same-text">
+                    <h2 class="mb-5">木棧道</h2>
+                    <h3>
+                        <p>全天開放，唯漲潮前後1.5小時封閉(大潮為2小時)木棧道位於解說半島，</p>
+                        <p>全長691公尺，跨越核心區、緩衝區與永續利用區</p>
+                        全天開放，唯漲潮前後1.5小時封閉(大潮為2小時)
+                    </h3>
+                </div>
             </div>
             <div class="row">
-                <div class="col-6 mid-text made-same">123</div>
+                <div class="col-6 mid-text made-same-text">
+                    <h2 class="mb-5">斜張橋</h2>
+                    <h3>
+                        <p>高美濕地景觀橋跨越120公尺寬的清水大排，</p>
+                        <p>雙弧曲線橋面總長265公尺、寬7.2公尺，</p>
+                        <p>兩側引道總長132公尺。該橋最初以融合夕陽、</p>
+                        <p>濕地及風力電塔等景觀特色，</p>
+                        並連結當地竹篙撐船的歷史人文，歷經近2年時間興建。
+                    </h3>
+                </div>
                 <div class="col-6 mid-pic made-same-pic">pic</div>
             </div>
             <div class="row">
                 <div class="col-6 btn-pic made-same-pic">pic</div>
-                <div class="col-6 btn-text made-same">123</div>
+                <div class="col-6 btn-text made-same-text">
+                    <h2 class="mb-5">遊客中心</h2>
+                    <h3>
+                        <p> 遊客服務中心本體是兩層樓建物，採斜坡造型，</p>
+                        <p> 外觀呈螺旋狀，宛若海浪從平地而起。二樓設有觀景平台，</p>
+                        <p> 可在此觀賞高美夕陽及風車，也適合夜晚觀星；</p>
+                        <p> 戶外廣場則有招潮蟹和貝殼造型的裝置藝術與戶外生態池，</p>
+                        供遊客拍照與就近觀察濕地生態。
+                    </h3>
+                </div>
             </div>
         </div>
     </section>
     <!--人造景觀-->
     <section class="com">
         <div class="container com-container">
+            <div class="row">
+                <div class="col-12 com-title">
+                    <h1>生態組成</h1>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-6">
                     <div class="card">
@@ -370,6 +417,12 @@
         </div>
     </section>
     <!--生態組成-->
+    <section class="plant">
+        <div class="container">
+
+
+        </div>
+    </section>
     <!--原生植物-->
     <!--調節成面-->
     <!--footer-->
