@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--bootstrap-->
 
     <style>
-        * h1 {
+        h1 {
             font-size: 50px;
             font-family: 微軟正黑體;
             margin: 0;
@@ -23,78 +24,150 @@
             font-family: 微軟正黑體;
         }
 
-        .nav-container {
-            height: 200px;
-            flex:fix;
+        h3 {
+            margin: 0;
+            font-size: 16px;
+            font-family: 微軟正黑體;
         }
 
-        @media (min-width: 1600px) {
+        /* @media (min-width: 1600px) {
             .container.nav-container {
                 max-width: 1200px;
             }
+        } */
+        /* .nav-container{
+            padding: 70px 0;
+        } */
+        .nav-tltle {
+            margin-right: 80px;
         }
 
-        .nav-tltle {
-            margin-right: 100px;
+        .en {
+            background-color: gray;
         }
 
         .en-container {
-            height: 100vh;
             display: flex;
             justify-content: center;
+            padding: 270px 0;
         }
 
         .en-pic {
             width: 600px;
-            height: 600px;
             background-image: url(02.jpg);
-            margin-top: calc(50vh - 300px);
         }
 
         .en-text {
-            width: 600px;
-            height: 600px;
+            width: 540px;
+            height: 540px;
             background-color: red;
-            margin-top: calc(50vh - 300px);
+            padding: 30px;
         }
 
         .his-container {
             width: 100%;
-            height: 200vh;
             background-color: aquamarine
         }
 
-        .his-title {
-            height: 20vh;
+        .container .row .his-title {
             background-color: brown;
+            padding: 44px 0;
+            text-align: center;
+            display:block;
         }
 
-        .his-text {
-            height: 180vh;
+        .his-text h2 {
             background-color: blueviolet;
+            line-height: 180px;
         }
 
         .his-pic {
-            background-color: gray;
+            background-color: yellow;
+        }
+
+        .his-pic-circle {
+            position: relative;
+        }
+
+        .col-12:nth-child(2n+1) {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .col-12:nth-child(2n) {
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        .col-12:nth-child(2n+1) .his-pic-circle::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: -53px;
+            top: 80px;
+            background-color: red;
+        }
+
+        .col-12:nth-child(2n) .his-pic-circle::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: -53px;
+            top: 80px;
+            background-color: red;
+        }
+
+
+        .his-pic-circle-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
         }
 
         .na-container {
             width: 100%;
-            height: 100vh;
-            background-image: url(02.jpg);
+            background-color: gray;
             color: white;
             text-align: center;
         }
 
         .na-title {
-            padding-top: calc(50vh - 72px);
             margin-bottom: 90px;
+        }
+
+        .made-container {
+            width: 100%;
+            background-color: aquamarine;
+        }
+
+        .made-title {
+            width: 100%;
+            height: 200px;
+            background-color: brown;
+        }
+
+        .made-same-pic {
+            background-color: gray;
+            margin-bottom: 110px;
+            background-image: url(02.jpg);
+        }
+
+        .btn-pic {
+            margin-bottom: 0;
+        }
+
+        .com-container {
+            width: 100%;
+            padding: 0;
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg  fixed-top">
         <div class="container nav-container">
             <a class="navbar-brand" href="#">
                 <h1>高美濕地</h1>
@@ -108,22 +181,22 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
                         <a class="nav-link" href="#">
-                            <h2 class="nav-tltle">關於高美</h2> <span class="sr-only">(current)</span>
+                            <h2 class="nav-tltle  animated fadeInDown">關於高美</h2>
                         </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#">
-                            <h2 class="nav-tltle">高美景觀</h2> <span class="sr-only">(current)</span>
+                            <h2 class="nav-tltle  animated fadeInDown delay-1s">高美景觀</h2>
                         </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#">
-                            <h2 class="nav-tltle">高美生態</h2> <span class="sr-only">(current)</span>
+                            <h2 class="nav-tltle animated fadeInDown delay-2s">高美生態</h2>
                         </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#">
-                            <h2>環境價值</h2> <span class="sr-only">(current)</span>
+                            <h2 class="animated fadeInDown delay-3s">環境價值</h2>
                         </a>
                     </li>
 
@@ -132,40 +205,173 @@
             </div>
         </div>
     </nav>
-
     <!--NAVBAR-->
-
-    <div class="container en-container">
-
-        <div class="en-pic">
-            One of three columns
-        </div>
-        <div class="en-text">
-            One of three columns
-        </div>
-    </div>
-
-    <!--濕地環境-->
-
-    <div class="container-fluid his-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 his-title">21</div>
-                <div class="col-8 his-text">21</div>
-                <div class="col-4 his-pic">12</div>
+    <section class="en">
+        <div class="container en-container">
+            <div class="en-pic">
+            </div>
+            <div class="en-text">
+                <h1>濕地環境</h1>
+                <h2>濕地成因</h2>
+                <h3>台中港興建後，為避免大甲溪河砂大量流入港口造成淤積，
+                    在台中港北防風林北岸興建攔砂堤，卻造成高美海水浴場泥沙日漸淤積，
+                    這些淤砂經過長期的自然演替形成多元棲地型態，孕育了豐富的生態資源。
+                </h3>
             </div>
         </div>
-    </div>
+    </section>
+    <!--濕地環境-->
+    <section class="his">
+        <div class="container-fluid his-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 his-title">
+                        <h1>人文歷史</h1>
+                        <h2>發展時間軸</h2>
+                    </div>
+                    <div class="col-7 his-text">
+                        <h2>1932 高美海水浴場開放</h2>
+                        <h2>1970 台中港興建</h2>
+                        <h2>1976 高美海水浴場關閉</h2>
+                        <h2>2000 海渡發電廠動工</h2>
+                        <h2>2004 臺中縣政府公告設立高美野生動物保護區</h2>
+                        <h2>2005 海渡發電廠因周遭居民抗爭放棄承租土地</h2>
+                        <h2>2007 內政部營建署將高美濕地列為國家級濕地</h2>
+                        <h2>2012 台中市政府公告高美野生動物保護區分區範圍，
+                            將保護區規劃為核心區、緩衝區及永續利用區</h2>
+                        <h2>2014 設置木棧道</h2>
+                        <h2>2016 景觀斜張橋落成</h2>
+                    </div>
+                    <div class="col-5 his-pic">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="his-pic-circle">
+                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="his-pic-circle">
+                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="his-pic-circle">
+                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="his-pic-circle">
+                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="his-pic-circle">
+                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="his-pic-circle">
+                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="his-pic-circle">
+                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="his-pic-circle">
+                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="his-pic-circle">
+                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="his-pic-circle">
+                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                </div>
+                            </div>
+
+
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--人文歷史-->
-    <div class="container-fluid na-container">
-        <h1 class="na-title ">自然景觀</h1>
-        <h2 class="na-title1 mb-3">日出/日落</h2>
-        <h2 class="na-title1 mb-3">潮汐</h2>
-        <h2 class="na-title1">生態</h2>
-    </div>
+    <section class="na">
+        <div class="container na-container">
+            <h1 class="na-title ">自然景觀</h1>
+            <h2 class="na-title1 mb-3">日出/日落</h2>
+            <h2 class="na-title1 mb-3">潮汐</h2>
+            <h2 class="na-title1">生態</h2>
+        </div>
+    </section>
     <!--自然景觀-->
-
-
+    <section class="made">
+        <div class="container made-container">
+            <div class="row">
+                <div class="col-12 made-title">人造景觀</div>
+            </div>
+            <div class="row">
+                <div class="col-6 top-pic made-same-pic">pic</div>
+                <div class="col-6 top-text made-same">123</div>
+            </div>
+            <div class="row">
+                <div class="col-6 mid-text made-same">123</div>
+                <div class="col-6 mid-pic made-same-pic">pic</div>
+            </div>
+            <div class="row">
+                <div class="col-6 btn-pic made-same-pic">pic</div>
+                <div class="col-6 btn-text made-same">123</div>
+            </div>
+        </div>
+    </section>
+    <!--人造景觀-->
+    <section class="com">
+        <div class="container com-container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <img src="02.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h2 class="card-title">底棲類</h2>
+                            <h3>
+                                <span>底棲類生物是指任何在海底或海床附近的生命，
+                                    大多數的底棲生物處於食物鏈的中間位置，是海洋中有機物的製造者。
+                                </span>
+                            </h3>
+                            <a href="#" class="btn">...more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <img src="02.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h2 class="card-title">鳥類</h2>
+                            <h3>
+                                <span>經過長期調查所記錄到的鳥類除了瀕臨絕種的黑面琵鷺之外，
+                                    鷸科、鴴科和鷺科佔最大宗。如果想要觀看壯觀的鳥類群集，
+                                    可以選在春、秋兩個候鳥遷徙的季節，是鳥況最佳的時候 。
+                                </span>
+                            </h3>
+                            <a href="#" class="btn">...more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--生態組成-->
+    <!--原生植物-->
+    <!--調節成面-->
+    <!--footer-->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
