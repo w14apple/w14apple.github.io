@@ -9,213 +9,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--bootstrap-->
+    <link rel="stylesheet" href="gaomeo.css">
 
-    <style>
-        h1 {
-            font-size: 50px;
-            font-family: 微軟正黑體;
-            margin: 0;
-        }
-
-        h2 {
-            margin: 0;
-            font-size: 24px;
-            font-family: 微軟正黑體;
-        }
-
-        h3 {
-            margin: 0;
-            font-size: 16px;
-            font-family: 微軟正黑體;
-        }
-
-        /* @media (min-width: 1600px) {
-            .container.nav-container {
-                max-width: 1200px;
-            }
-        } */
-        .nav-tltle {
-            margin-right: 80px;
-        }
-
-        .en {
-            background-color: gray;
-
-        }
-
-        .en-container {
-            display: flex;
-            justify-content: center;
-            padding: 270px 0;
-        }
-
-        .en-pic {
-            width: 600px;
-            background-image: url(02.jpg);
-        }
-
-        .en-text {
-            width: 600px;
-            height: 600px;
-            background-color: brown;
-            padding: 150px 30px 0 30px;
-        }
-
-        .his-container {
-            width: 100%;
-            background-color: aquamarine
-        }
-
-        .container .row .his-title {
-            background-color: brown;
-            padding: 44px 0;
-            text-align: center;
-            display: block;
-        }
-
-        .his-text h2 {
-            background-color: blueviolet;
-            line-height: 180px;
-        }
-
-        .his-text .his-pic {
-            background-color: yellow;
-        }
-
-        .his-pic-circle {
-            position: relative;
-        }
-
-        .his-img:nth-child(2n+1) {
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        .his-img:nth-child(2n) {
-            display: flex;
-            justify-content: flex-end;
-
-        }
-
-        .his-img:nth-child(2n+1) .his-pic-circle::after {
-            content: "";
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            right: -53px;
-            top: 80px;
-            background-color: red;
-        }
-
-        .his-img:nth-child(2n) .his-pic-circle::after {
-            content: "";
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            left: -53px;
-            top: 80px;
-            background-color: red;
-        }
-
-        .his-pic-circle-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-        }
-
-        .na {
-            background-color: cadetblue;
-        }
-
-        .na-container {
-            width: 100%;
-            background-color: gray;
-            color: white;
-            text-align: center;
-            padding: 407px 0;
-        }
-
-        .na-title {
-            margin-bottom: 90px;
-        }
-
-        .made {
-            background-color: blueviolet;
-        }
-
-        .made-container {
-            padding: 30px, 0;
-            width: 100%;
-            background-color: aquamarine;
-        }
-
-        .made-title {
-            padding: 70px 0;
-            background-color: brown;
-            text-align: center;
-        }
-
-        .made-same-pic {
-            width: 100%;
-            height: 600px;
-            /* 需要更改的地方------------------------------------------------- */
-            background-color: gray;
-            margin-bottom: 110px;
-            background-image: url(02.jpg);
-        }
-
-        .made-same-text {
-            padding: 180px 30px 0 30px;
-            text-align: center;
-        }
-
-        .btn-pic {
-            margin-bottom: 200px;
-        }
-
-        .com-container {
-            width: 100%;
-        }
-
-        .com-title {
-            width: 100%;
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg  fixed-top">
-        <div class="container nav-container">
+        <div class="container-fluid nav-container">
             <a class="navbar-brand" href="#">
-                <h1>高美濕地</h1>
+                <h1 class="logo">高美濕地</h1>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
                         <a class="nav-link" href="#">
-                            <h2 class="nav-tltle  animated fadeInDown">關於高美</h2>
+                            <h3 class="nav-tltle  animated fadeInDown">關於高美</h3>
                         </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#">
-                            <h2 class="nav-tltle  animated fadeInDown delay-1s">高美景觀</h2>
+                            <h3 class="nav-tltle  animated fadeInDown delay-1s">高美景觀</h3>
                         </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#">
-                            <h2 class="nav-tltle animated fadeInDown delay-2s">高美生態</h2>
+                            <h3 class="nav-tltle animated fadeInDown delay-2s">高美生態</h3>
                         </a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="#">
-                            <h2 class="animated fadeInDown delay-3s">環境價值</h2>
+                            <h3 class="animated nav-tltle fadeInDown delay-3s">環境價值</h3>
                         </a>
                     </li>
 
@@ -226,16 +53,18 @@
     </nav>
     <!--NAVBAR-->
     <section class="en">
-        <div class="container en-container">
-            <div class="en-pic">
-            </div>
-            <div class="en-text">
-                <h1 class="mb-4">濕地環境</h1>
-                <h2 class="mb-4">濕地成因</h2>
-                <h3>台中港興建後，為避免大甲溪河砂大量流入港口造成淤積，
-                    在台中港北防風林北岸興建攔砂堤，卻造成高美海水浴場泥沙日漸淤積，
-                    這些淤砂經過長期的自然演替形成多元棲地型態，孕育了豐富的生態資源。
-                </h3>
+        <div class="en-op">
+            <div class="container en-container">
+                <div class="en-pic">
+                </div>
+                <div class="en-text">
+                    <h1 class="mb-4">濕地環境</h1>
+                    <h2 class="mb-4">濕地成因</h2>
+                    <h3>台中港興建後，為避免大甲溪河砂大量流入港口造成淤積，
+                        在台中港北防風林北岸興建攔砂堤，卻造成高美海水浴場泥沙日漸淤積，
+                        這些淤砂經過長期的自然演替形成多元棲地型態，孕育了豐富的生態資源。
+                    </h3>
+                </div>
             </div>
         </div>
     </section>
@@ -245,7 +74,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 his-title">
-                        <h1>人文歷史</h1>
+                        <h1 class="mb-2">人文歷史</h1>
                         <h2>發展時間軸</h2>
                     </div>
                     <div class="col-7 his-text">
@@ -265,52 +94,52 @@
                         <div class="row">
                             <div class="col-12 his-img">
                                 <div class="his-pic-circle">
-                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                    <img class="his-pic-circle-img" src="./img/his-01.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-12 his-img">
                                 <div class="his-pic-circle">
-                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                    <img class="his-pic-circle-img" src="./img/his-02.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-12 his-img">
                                 <div class="his-pic-circle">
-                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                    <img class="his-pic-circle-img" src="./img/his-03.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-12 his-img">
                                 <div class="his-pic-circle">
-                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                    <img class="his-pic-circle-img" src="./img/his-04.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-12 his-img">
                                 <div class="his-pic-circle">
-                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                    <img class="his-pic-circle-img" src="./img/his-05.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-12 his-img">
                                 <div class="his-pic-circle">
-                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                    <img class="his-pic-circle-img" src="./img/his-06.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-12 his-img">
                                 <div class="his-pic-circle">
-                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                    <img class="his-pic-circle-img" src="./img/his-07.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-12 his-img">
                                 <div class="his-pic-circle">
-                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                    <img class="his-pic-circle-img" src="./img/his-08.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-12 his-img">
                                 <div class="his-pic-circle">
-                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                    <img class="his-pic-circle-img" src="./img/his-09.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-12 his-img">
                                 <div class="his-pic-circle">
-                                    <img class="his-pic-circle-img" src="02.jpg" alt="">
+                                    <img class="his-pic-circle-img" src="./img/his-10.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -379,37 +208,37 @@
     <section class="com">
         <div class="container com-container">
             <div class="row">
-                <div class="col-12 com-title">
-                    <h1>生態組成</h1>
+                <div class="col-12 ">
+                    <h1 class="com-title">生態組成</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
-                    <div class="card">
-                        <img src="02.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                    <div class="card ">
+                        <img src="./img/card-left.jpg" class="card-img-top" alt="...">
+                        <div class="card-body com-card-body">
                             <h2 class="card-title">底棲類</h2>
-                            <h3>
+                            <h3 class="mb-4">
                                 <span>底棲類生物是指任何在海底或海床附近的生命，
                                     大多數的底棲生物處於食物鏈的中間位置，是海洋中有機物的製造者。
                                 </span>
                             </h3>
-                            <a href="#" class="btn">...more</a>
+                            <a href="#" class="btn com-more">...more</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="card">
-                        <img src="02.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <img src="./img/card-right.jpg" class="card-img-top" alt="...">
+                        <div class="card-body com-card-body">
                             <h2 class="card-title">鳥類</h2>
-                            <h3>
+                            <h3 class="mb-1">
                                 <span>經過長期調查所記錄到的鳥類除了瀕臨絕種的黑面琵鷺之外，
                                     鷸科、鴴科和鷺科佔最大宗。如果想要觀看壯觀的鳥類群集，
                                     可以選在春、秋兩個候鳥遷徙的季節，是鳥況最佳的時候 。
                                 </span>
                             </h3>
-                            <a href="#" class="btn">...more</a>
+                            <a href="#" class="btn com-more">...more</a>
                         </div>
                     </div>
                 </div>
@@ -419,12 +248,54 @@
     <!--生態組成-->
     <section class="plant">
         <div class="container">
+            <div class="plant-container">
+                <div class="plant-title">
+                    <h1>原生植物</h1>
+                </div>
+                <div class="plant-top">
+                    <h2 class="mb-4">雲林莞草</h2>
+                    <h3>莖稈呈三角狀，單生，直立，高可達100公分，地下根莖發達，莖節膨大成球狀。葉數少，通常2~4枚，線形。花期：5~6 月。</h3>
+                </div>
+                <div class="plant-btm">
 
-
+                    <h2 class="mb-4 ">大安水蓑衣</h2>
+                    <h3 class="pr-5 pl-5">大安水簑衣的「大安」這兩個字，指的是臺中縣『大安』鄉，大安水簑衣由於棲息地受到人為的破壞，瀕臨滅絕，目前僅剩分布於台灣的台中大安、清水以及龍井。</h3>
+                </div>
+            </div>
         </div>
     </section>
     <!--原生植物-->
-    <!--調節成面-->
+    <section class="ad">
+        <div class="ad-title">
+            <h1>調節層面</h1>
+        </div>
+        <div class="ad-pic ">
+            <div class="ad-containter-circle">
+                <div class="ad-pic-circle01 mb-5"></div>
+                <h2 class="ad-circle-text">碳吸存</h2>
+            </div>
+            <div class="ad-containter-circle">
+                <div class="ad-pic-circle01 mb-5"></div>
+                <h2 class="ad-circle-text">水資源</h2>
+            </div>
+            <div class="ad-containter-circle">
+                <div class="ad-pic-circle01 mb-5"></div>
+                <h2 class="ad-circle-text">穩定海岸線</h2>
+            </div>
+            <div class="ad-containter-circle">
+                <div class="ad-pic-circle01 mb-5"></div>
+                <h2 class="ad-circle-text">減緩海嘯</h2>
+            </div>
+        </div>
+        <div class="ad-text">
+            <h1>內文區塊</h1>
+        </div>
+    </section>
+    <!--調節層面-->
+    <section class="footer ">
+        <div class="arrow"></div>
+        <div class="footer-text">© 台中高美濕地 2019 僅用於課程學習用途，素材如侵權，請來信告知。</div>
+    </section>
     <!--footer-->
 
 

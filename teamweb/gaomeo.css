@@ -1,0 +1,313 @@
+
+        h1 {
+            font-size: 50px;
+            font-family: 微軟正黑體;
+            margin: 0;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+            font-family: 微軟正黑體;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 16px;
+            font-family: 微軟正黑體;
+        }
+
+        /* @media (min-width: 1600px) {
+            .container.nav-container {
+                max-width: 1200px;
+            }
+        } */
+        .logo{
+            color: white;
+        }
+        .nav-tltle {
+            margin-right: 45px;
+            color: black;
+        }
+
+        .nav-container {
+            padding: 0 8%;
+        }
+
+        .en {
+            background-image: url("/img/banner.jpg");
+             position: relative;
+        }
+        .en::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        /*用before撐滿整個畫面 並用posision 來定位 再用z-index拉到最前*/
+        .en-op{
+            opacity: 1;
+        }
+        .en-container {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            padding: 185px 0;
+        }
+
+        .en-pic {
+            width: 600px;
+            background-image: url("/img/banner-con-pic.jpg");
+        }
+
+        .en-text {
+            width: 600px;
+            height: 600px;
+            padding: 150px 0 0 95px;
+            color: white;
+        }
+
+        .his-container {
+            width: 100%;
+            padding-bottom: 100px;
+        }
+
+        .container .row .his-title {
+            padding: 20px 0;
+            text-align: center;
+            display: block;
+        }
+
+        .his-text h2 {
+            height: 180px;
+            display: flex;
+            align-items: center;
+        }
+
+        .his-pic {
+            position: relative;
+            
+        }
+        .his-pic::after{
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 100%;
+            background-color: #3F3F3F;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .his-pic-circle {
+            position: relative;
+            width: 100%;
+        }
+
+        .his-pic-circle:nth-child(n)::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: #3F3F3F;
+            transform: translate(-50%,-50%);
+        }
+        .his-img:nth-child(2n) .his-pic-circle::after {
+            transform: translateX(-100%);
+            clip-path: polygon(0 50%, 100% 100%, 100% 0);
+        }
+        /* 位子錯位 */
+        .his-img:nth-child(2n+1) .his-pic-circle::after {
+            transform: translateX(0%);
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+        }
+        .his-img:nth-child(2n) .his-pic-circle{
+            display: flex;
+            justify-content: flex-start;
+            
+        }
+        .his-img:nth-child(2n+1) .his-pic-circle{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .his-pic-circle-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+        }
+
+        .na {
+            background-image: url("./img/na-pic01.jpg")
+        }
+
+        .na-container {
+            width: 100%;
+            text-align: center;
+            padding: 407px 0;
+        }
+
+        .na-title {
+            margin-bottom: 90px;
+            color: white;
+            text-shadow:  5px 5px 6px rgba(0, 0, 0, 1);
+        }
+
+        .made {
+            background-color: blueviolet;
+        }
+
+        .made-container {
+            padding: 30px, 0;
+            width: 100%;
+            background-color: aquamarine;
+        }
+
+        .made-title {
+            padding: 30px 0;
+            background-color: brown;
+            text-align: center;
+        }
+
+        .made-same-pic {
+            width: 100%;
+            height: 600px;
+            /* 需要更改的地方------------------------------------------------- */
+            background-color: gray;
+            margin-bottom: 110px;
+            background-image: url(02.jpg);
+        }
+
+        .made-same-text {
+            padding: 180px 30px 0 30px;
+            text-align: center;
+        }
+
+
+
+        .com {
+            padding-bottom: 200px;
+        }
+
+        .com-container {
+            width: 100%;
+        }
+
+        .com-title {
+            width: 100%;
+            text-align: center;
+            padding: 52px 0
+        }
+
+        .card {
+            box-shadow: 10px 10px 0.8em 0.1em rgba(0, 0, 0, 0.3);
+
+        }
+
+        .com-card-body {
+            padding: 30px;
+        }
+
+        .com-more {
+            float: right;
+        }
+
+        .plant {
+            width: 100%;
+            background-color: cadetblue;
+            padding: 30px 0 200px 0;
+        }
+
+        .plant-title {
+            text-align: center;
+            padding: 50px 0 200px 0;
+        }
+
+        .plant-top {
+            width: 90%;
+            border: 1px black solid;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .plant-btm {
+            width: 90%;
+            border: 1px black solid;
+            margin: 0 auto;
+            text-align: center;
+            padding: 38px 0;
+        }
+
+        .ad {
+            width: 100%;
+            padding: 30px 0;
+        }
+
+        .ad-title {
+            width: 100%;
+            padding: 30px 0;
+            text-align: center;
+            margin: 60px 0 100px 0;
+        }
+
+        .ad-pic {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 150px;
+        }
+
+        .ad-containter-circle {
+            width: 300px;
+            height: 300px;
+            margin: 0 70px;
+        }
+        .ad-pic-circle01 {
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            border-radius: 50%;
+        }
+        .ad-circle-text{
+            text-align: center;
+        }
+
+        .ad-text {
+            width: 60%;
+            height: 125px;
+            background-color: red;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            text-align: center;
+            padding: 32px 0;
+
+        }
+
+        .footer {
+            width: 100%;
+            background-color: gray;
+            padding-top : 20px;
+        }
+
+        .arrow {
+            width: 40px;
+            height: 90px;
+            background-color: red;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .footer-text {
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5)
+        }

@@ -12,8 +12,7 @@
             height: 50px;
             background-color: green;
             position: relative;
-                    }
-
+        }
     </style>
 </head>
 
@@ -21,16 +20,27 @@
     <div class="box green"> </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"> </script>
     <script>
-        TweenMax.to('.box', 0.5, {
-            backgroundColor:"red",
-            top: 50,
-            left: 500,
-            width:300,
-            height:10,
+        // TweenMax.to('.box', 0.5, {
+        //     backgroundColor:"red",
+        //     top: 50,
+        //     left: 500,
+        //     width:300,
+        //     height:10,
+        // });
 
-            
-        });
-        
+
+        // TweenMax.to(".box",1,{top:50});
+        // TweenMax.to(".box",1,{left:50,delay:1});
+        // TweenMax.to(".box",1,{opacity:0,delay:2});
+
+        // var tm = new TimelineLite();
+        // tm.add( TweenLite.to(".box",1,{top:50}));
+        // tm.add( TweenLite.to(".box",1,{left:50}));
+        // tm.add( TweenLite.to(".box",1,{opacity:50}));
+
+        var tm = new TimelineLite();
+
+
     </script>
 
 </body>
