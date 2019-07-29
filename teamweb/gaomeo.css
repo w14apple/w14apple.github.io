@@ -26,19 +26,20 @@
             color: white;
         }
         .nav-tltle {
-            margin-right: 45px;
+            margin-right: 91px;
             color: black;
+            
         }
 
         .nav-container {
             padding: 0 8%;
         }
 
-        .en {
-            background-image: url("./img/banner.jpg");
-             position: relative;
+        #en {
+            background-color: gray;
+             /* position: relative; */
         }
-        .en::before{
+        /* .en::before{
             content: "";
             position: absolute;
             top: 0;
@@ -47,39 +48,48 @@
             right: 0;
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 0;
-        }
+        } */
         /*用before撐滿整個畫面 並用posision 來定位 再用z-index拉到最前*/
         .en-op{
             opacity: 1;
         }
         .en-container {
+            padding: 0;
             display: flex;
-            position: relative;
-            justify-content: center;
-            padding: 185px 0;
         }
 
         .en-pic {
-            width: 600px;
-            background-image: url("./img/banner-con-pic.jpg");
+            width: 50%;
+            height: 100vh;
+            background-image: url("./img/banner.jpg");
+            margin-right: 110px;
         }
 
         .en-text {
             width: 600px;
             height: 600px;
-            padding: 150px 0 0 95px;
+            padding: 35vh 0 0 0;
             color: white;
+            letter-spacing: 1.5px;
+            
+
+        }
+        #his{
+            background-image: url("./img/his-background.jpg");
+            background-position: 0 -73px;
+            padding: 0 0 50px 0;
         }
 
         .his-container {
             width: 100%;
-            padding-bottom: 100px;
+            padding-bottom: 50px;
         }
 
         .container .row .his-title {
             padding: 20px 0;
             text-align: center;
             display: block;
+            margin-bottom: 100px;
         }
 
         .his-text h2 {
@@ -142,7 +152,7 @@
             border-radius: 50%;
         }
 
-        .na {
+        #na {
             background-image: url("./img/na-pic01.jpg");
             transition-duration: 0.5s;
             
@@ -169,32 +179,30 @@
             border-radius: 50%;
             opacity: 0.5;
         }
-
-
-
-        .made {
-            background-color: blueviolet;
-        }
-
         .made-container {
             padding: 30px, 0;
             width: 100%;
-            background-color: aquamarine;
         }
 
         .made-title {
             padding: 30px 0;
-            background-color: brown;
             text-align: center;
         }
 
         .made-same-pic {
             width: 100%;
             height: 600px;
-            /* 需要更改的地方------------------------------------------------- */
             background-color: gray;
             margin-bottom: 110px;
-            background-image: url(02.jpg);
+        }
+        .top-pic{
+            background-image: url("./img/made-top-pic.jpg");
+        }
+        .mid-pic{
+            background-image: url("./img/made-mid-pic.jpg");
+        }
+        .btn-pic{
+            background-image: url("./img/made-btn-pic.jpg");
         }
 
         .made-same-text {
@@ -204,7 +212,7 @@
 
 
 
-        .com {
+        #com {
             padding-bottom: 200px;
         }
 
@@ -231,7 +239,7 @@
             float: right;
         }
 
-        .plant {
+        #plant {
             width: 100%;
             background-color: cadetblue;
             padding: 30px 0 200px 0;
@@ -259,7 +267,7 @@
             padding: 38px 0;
         }
 
-        .ad {
+        #ad {
             width: 100%;
             padding: 30px 0;
         }
@@ -305,23 +313,25 @@
 
         }
 
-        .footer {
+        #footer {
             width: 100%;
             background-color: gray;
             padding-top : 20px;
         }
 
-        .arrow {
-            width: 40px;
-            height: 90px;
-            background-color: red;
-            margin: 0 auto;
-            margin-bottom: 20px;
-        }
+     
 
         .footer-text {
             padding: 20px 0;
             text-align: center;
             color: white;
             background-color: rgba(0, 0, 0, 0.5)
+        }
+        .arrow {
+            width: 20px;
+            height: 198px;
+            background-image: url(./img/back\ to\ home.png);
+            position: fixed;
+            bottom: 10px;
+            right: 7%;
         }

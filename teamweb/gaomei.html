@@ -26,22 +26,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#en">
                             <h3 class="nav-tltle  animated fadeInDown">關於高美</h3>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#na">
                             <h3 class="nav-tltle  animated fadeInDown delay-1s">高美景觀</h3>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#com">
                             <h3 class="nav-tltle animated fadeInDown delay-2s">高美生態</h3>
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#ad">
                             <h3 class="animated nav-tltle fadeInDown delay-3s">環境價值</h3>
                         </a>
                     </li>
@@ -52,7 +52,7 @@
         </div>
     </nav>
     <!--NAVBAR-->
-    <section class="en">
+    <section id="en">
         <div class="en-op">
             <div class="container-fluid en-container">
                 <div class="en-pic">
@@ -69,8 +69,8 @@
         </div>
     </section>
     <!--濕地環境-->
-    <section class="his">
-        <div class="container-fluid his-container">
+    <section id="his">
+        <div class="container-fluid ">
             <div class="container">
                 <div class="row">
                     <div class="col-12 his-title">
@@ -149,7 +149,7 @@
         </div>
     </section>
     <!--人文歷史-->
-    <section class="na">
+    <section id="na" data-bgimg="color">
         <div class="container na-container">
             <h1 class="na-title ">自然景觀</h1>
             <h2 class="na-title-text na-title1 mb-3">日出/日落</h2>
@@ -158,7 +158,7 @@
         </div>
     </section>
     <!--自然景觀-->
-    <section class="made">
+    <section id="made">
         <div class="container made-container">
             <div class="row">
                 <div class="col made-title">
@@ -205,7 +205,7 @@
         </div>
     </section>
     <!--人造景觀-->
-    <section class="com">
+    <section id="com">
         <div class="container com-container">
             <div class="row">
                 <div class="col-12 ">
@@ -246,7 +246,7 @@
         </div>
     </section>
     <!--生態組成-->
-    <section class="plant">
+    <section id="plant">
         <div class="container">
             <div class="plant-container">
                 <div class="plant-title">
@@ -265,7 +265,7 @@
         </div>
     </section>
     <!--原生植物-->
-    <section class="ad">
+    <section id="ad">
         <div class="ad-title">
             <h1>調節層面</h1>
         </div>
@@ -292,11 +292,13 @@
         </div>
     </section>
     <!--調節層面-->
-    <section class="footer ">
-        <div class="arrow"></div>
+    <section id="footer">
         <div class="footer-text">© 台中高美濕地 2019 僅用於課程學習用途，素材如侵權，請來信告知。</div>
     </section>
+
     <!--footer-->
+
+    <div class="arrow"></div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -309,23 +311,67 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-        <script>
-        
-        // $("na-title1").click(function(){
-        //     console.log("sdsd");
-            
-        // });
-        $(".na-title1").click(function(){
-            $(".na").css("background-image","url('./img/na-pic01.jpg')");
-            
+    <script>
+
+
+        $(".na-title1").click(function () {
+            //.na-title1的點擊函數
+            var now_bg_image_src = $("#na").data('bgimg');
+            //宣告一個變數為now_bg_image_src 是 div 是na的data的bgimg
+            if (now_bg_image_src == 'image_1') {
+                $("#na").css("background-image", "none");
+                $("#na").css("background-color", "red");
+                $("#na").data('bgimg', 'color');
+            } else {
+                $("#na").css("background-image", "url('./img/na-pic01.jpg')");
+                $("#na").data('bgimg', 'image_1');
+            }
         });
-        $(".na-title2").click(function(){
-            $(".na").css("background-image","url('./img/na-pic02.jpg')");
+        $(".na-title2").click(function () {
+            var now_bg_image_src = $("#na").data('bgimg');
+            if (now_bg_image_src == 'image_2') {
+                $("#na").css("background-image", "none");
+                $("#na").css("background-color", "red");
+                $("#na").data('bgimg', 'color');
+            } else {
+                $("#na").css("background-image", "url('./img/na-pic02.jpg')");
+                $("#na").data('bgimg', 'image_2');
+            }
         });
-        $(".na-title3").click(function(){
-            $(".na").css("background-image","url('./img/na-pic03.jpg')");
+        $(".na-title3").click(function () {
+            var now_bg_image_src = $("#na").data('bgimg');
+            if (now_bg_image_src == 'image_3') {
+                $("#na").css("background-image", "none");
+                $("#na").css("background-color", "red");
+                $("#na").data('bgimg', 'color');
+            } else {
+                $("#na").css("background-image", "url('./img/na-pic03.jpg')");
+                $("#na").data('bgimg', 'image_3');
+            }
         });
-        </script>
+
+
+
+        // var btns = document.querySelectorAll(".na-title-text");
+        // var image_index_array = ['image_1', 'image_2', 'image_3'];
+        // var image_src_array = ['./img/na-pic01.jpg', './img/na-pic02.jpg', './img/na-pic03.jpg'];
+
+        // for (let i = 0; i < btns.length; i++) {
+        //     const btn = btns[i];
+        //     $(btn).click(function () {
+        //         var now_bg_image_src = $("#na").data('bgimg');
+        //         if (now_bg_image_src == image_index_array[i]) {
+        //             $("#na").css("background-image", "none");
+        //             $("#na").css("background-color", "red");
+        //             $("#na").data('bgimg', 'color');
+        //         } else {
+        //             $("#na").css("background-image", "url("+image_src_array[i]+")");
+        //             $("#na").data('bgimg', image_index_array[i]);
+        //         }
+        //     });
+        // }
+
+    </script>
 </body>
 
 </html>
