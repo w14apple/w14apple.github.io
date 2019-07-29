@@ -152,9 +152,9 @@
     <section class="na">
         <div class="container na-container">
             <h1 class="na-title ">自然景觀</h1>
-            <h2 class="na-title1 mb-3">日出/日落</h2>
-            <h2 class="na-title1 mb-3">潮汐</h2>
-            <h2 class="na-title1">生態</h2>
+            <h2 class="na-title-text na-title1 mb-3">日出/日落</h2>
+            <h2 class="na-title-text na-title2 mb-3">潮汐</h2>
+            <h2 class="na-title-text na-title3">生態</h2>
         </div>
     </section>
     <!--自然景觀-->
@@ -309,6 +309,23 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
+        <script>
+        
+        // $("na-title1").click(function(){
+        //     console.log("sdsd");
+            
+        // });
+        $(".na-title1").click(function(){
+            $(".na").css("background-image","url('./img/na-pic01.jpg')");
+            
+        });
+        $(".na-title2").click(function(){
+            $(".na").css("background-image","url('./img/na-pic02.jpg')");
+        });
+        $(".na-title3").click(function(){
+            $(".na").css("background-image","url('./img/na-pic03.jpg')");
+        });
+        </script>
 </body>
 
 </html>

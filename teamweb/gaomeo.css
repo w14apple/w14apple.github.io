@@ -35,7 +35,7 @@
         }
 
         .en {
-            background-image: url("/img/banner.jpg");
+            background-image: url("./img/banner.jpg");
              position: relative;
         }
         .en::before{
@@ -61,7 +61,7 @@
 
         .en-pic {
             width: 600px;
-            background-image: url("/img/banner-con-pic.jpg");
+            background-image: url("./img/banner-con-pic.jpg");
         }
 
         .en-text {
@@ -143,13 +143,15 @@
         }
 
         .na {
-            background-image: url("./img/na-pic01.jpg")
+            background-image: url("./img/na-pic01.jpg");
+            transition-duration: 0.5s;
+            
         }
 
         .na-container {
             width: 100%;
             text-align: center;
-            padding: 407px 0;
+            padding: 404px 0;
         }
 
         .na-title {
@@ -157,6 +159,18 @@
             color: white;
             text-shadow:  5px 5px 6px rgba(0, 0, 0, 1);
         }
+        .na-title-text{
+            width: 150px;
+            height: 30px;
+            margin: 0 auto;
+        }
+        .na-title-text:hover{
+            background-color: pink;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+
 
         .made {
             background-color: blueviolet;
