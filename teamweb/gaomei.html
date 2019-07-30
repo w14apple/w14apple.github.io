@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <link href="lightbox.css" rel="stylesheet" />
+
+
     <link rel="stylesheet" href="gaomeo.css">
+    <style>
+        .ad-pic a img {
+            width: 100%;
+        }
+    </style>
 
 </head>
 
@@ -223,7 +233,7 @@
                                     大多數的底棲生物處於食物鏈的中間位置，是海洋中有機物的製造者。
                                 </span>
                             </h3>
-                            <a href="#" class="btn com-more">...more</a>
+                            <a href="#com" class="btn com-more">...more</a>
                         </div>
                     </div>
                 </div>
@@ -238,7 +248,7 @@
                                     可以選在春、秋兩個候鳥遷徙的季節，是鳥況最佳的時候 。
                                 </span>
                             </h3>
-                            <a href="#" class="btn com-more">...more</a>
+                            <a href="#com" class="btn com-more">...more</a>
                         </div>
                     </div>
                 </div>
@@ -247,6 +257,7 @@
     </section>
     <!--生態組成-->
     <section id="plant">
+        <div class="plant-all"></div>
         <div class="container">
             <div class="plant-container">
                 <div class="plant-title">
@@ -259,68 +270,86 @@
                 <div class="plant-btm">
 
                     <h2 class="mb-4 ">大安水蓑衣</h2>
-                    <h3 class="pr-5 pl-5">大安水簑衣的「大安」這兩個字，指的是臺中縣『大安』鄉，大安水簑衣由於棲息地受到人為的破壞，瀕臨滅絕，目前僅剩分布於台灣的台中大安、清水以及龍井。</h3>
+                    <h3 class="pr-5 pl-5">大安水簑衣的「大安」這兩個字，指的是臺中縣『大安』鄉，大安水簑衣由於棲息地受到人為的破壞，瀕臨滅絕，目前僅剩分布於台灣的台中大安、清水以及龍井。
+                    </h3>
                 </div>
             </div>
         </div>
+
     </section>
     <!--原生植物-->
     <section id="ad">
         <div class="ad-title">
             <h1>調節層面</h1>
         </div>
-        <div class="ad-pic ">
-            <div class="ad-containter-circle">
-                <div class="ad-pic-circle01 mb-5"></div>
+        <div class="ad-pic row">
+            <a href="/img/01.svg" class=" col-md-3 col-6 d-flex flex-wrap justify-content-center align-self-center"
+                data-lightbox="image-1" data-title="ad-pic_01"><img src="/img/01.svg" alt=""><span>碳吸存</span></a>
+            <a href="/img/02.svg" class=" col-md-3 col-6  d-flex flex-wrap justify-content-center align-self-center"
+                data-lightbox="image-1" data-title="ad-pic_01"><img src="/img/02.svg" alt=""><span>水資源</span></a>
+            <a href="/img/03.svg" class=" col-md-3 col-6  d-flex flex-wrap justify-content-center align-self-center"
+                data-lightbox="image-1" data-title="ad-pic_01"><img src="/img/03.svg" alt=""><span>穩定海岸線</span></a>
+            <a href="/img/04.svg" class=" col-md-3 col-6  d-flex flex-wrap justify-content-center align-self-center"
+                data-lightbox="image-1" data-title="ad-pic_01"><img src="/img/04.svg" alt=""><span>減緩海嘯</span></a>
+
+
+
+
+
+
+            <!-- <div class="ad-containter-circle">
+                <div class="ad-pic-circle ad-pic01 mb-5"></div>
                 <h2 class="ad-circle-text">碳吸存</h2>
             </div>
             <div class="ad-containter-circle">
-                <div class="ad-pic-circle01 mb-5"></div>
+                <div class="ad-pic-circle ad-pic02 mb-5"></div>
                 <h2 class="ad-circle-text">水資源</h2>
             </div>
             <div class="ad-containter-circle">
-                <div class="ad-pic-circle01 mb-5"></div>
+                <div class="ad-pic-circle ad-pic03 mb-5"></div>
                 <h2 class="ad-circle-text">穩定海岸線</h2>
             </div>
             <div class="ad-containter-circle">
-                <div class="ad-pic-circle01 mb-5"></div>
+                <div class="ad-pic-circle ad-pic04 mb-5"></div>
                 <h2 class="ad-circle-text">減緩海嘯</h2>
-            </div>
-        </div>
-        <div class="ad-text">
-            <h1>內文區塊</h1>
+            </div> -->
         </div>
     </section>
     <!--調節層面-->
     <section id="footer">
         <div class="footer-text">© 台中高美濕地 2019 僅用於課程學習用途，素材如侵權，請來信告知。</div>
     </section>
-
     <!--footer-->
 
     <div class="arrow"></div>
 
 
+
+
+
+
+    <script src="/lightbox-plus-jquery.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
     <script>
-
-
         $(".na-title1").click(function () {
             //.na-title1的點擊函數
             var now_bg_image_src = $("#na").data('bgimg');
+            console.log(now_bg_image_src);
+
             //宣告一個變數為now_bg_image_src 是 div 是na的data的bgimg
             if (now_bg_image_src == 'image_1') {
                 $("#na").css("background-image", "none");
-                $("#na").css("background-color", "red");
+                $("#na").css("background-color", "#7C7972");
                 $("#na").data('bgimg', 'color');
             } else {
                 $("#na").css("background-image", "url('./img/na-pic01.jpg')");
@@ -331,7 +360,7 @@
             var now_bg_image_src = $("#na").data('bgimg');
             if (now_bg_image_src == 'image_2') {
                 $("#na").css("background-image", "none");
-                $("#na").css("background-color", "red");
+                $("#na").css("background-color", "#7C7972");
                 $("#na").data('bgimg', 'color');
             } else {
                 $("#na").css("background-image", "url('./img/na-pic02.jpg')");
@@ -342,7 +371,7 @@
             var now_bg_image_src = $("#na").data('bgimg');
             if (now_bg_image_src == 'image_3') {
                 $("#na").css("background-image", "none");
-                $("#na").css("background-color", "red");
+                $("#na").css("background-color", "#7C7972");
                 $("#na").data('bgimg', 'color');
             } else {
                 $("#na").css("background-image", "url('./img/na-pic03.jpg')");
@@ -371,6 +400,36 @@
         //     });
         // }
 
+        //-----------------------------------------------------------------------------------------------------
+        // $(".plant-top").hover(function () {
+        //     $('.plant-all').css('background-image', "url('./img/plant-top.jpg')");
+        //     $('.plant-all').fadeIn('fast');
+        //     $('.plant-top').css("color", "white");
+        //     $('.plant-btm').css("color", "white");
+        // }, function () {
+        //     $('.plant-all').fadeOut("fast");
+        //     $('.plant-all').css("background-color", "none");
+        //     $('.plant-top').css("color", "black");
+        //     $('.plant-btm').css("color", "black");
+        // })
+        // $(".plant-btm").hover(function () {
+        //     $('.plant-all').css('background-image', "url('./img/plant-btm.jpg')");
+        //     $('.plant-all').fadeIn('fast');
+        //     $('.plant-all').css("transition", "opacity 0.02s linear");
+        //     $('.plant-all').css("opacity", "1");
+        //     $('.plant-top').css("color", "white");
+        //     $('.plant-btm').css("color", "white");
+        // }, function () {
+        //     $('.plant-all').fadeOut("fast");
+        //     $('.plant-all').css("transition", "opacity 0.02s linear");
+        //     $('.plant-all').css("opacity", "0");
+        //     $('.plant-top').css("color", "white");
+        //     $('.plant-btm').css("color", "white");
+        // })
+
+        //jq 的動畫建議不要使用 動畫會塞車
+        //-------------------------------------------------------------------------------------
+       
     </script>
 </body>
 
