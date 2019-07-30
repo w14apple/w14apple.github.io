@@ -166,6 +166,8 @@ h3 {
 #na {
     background-color: #7C7972;
     transition-duration: 0.5s;
+    background-size: cover;
+    background-position: center;
 
 }
 
