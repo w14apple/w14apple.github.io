@@ -25,6 +25,10 @@ h3 {
     color: white;
 }
 
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .nav-tltle {
     margin-right: 91px;
     color: black;
@@ -51,8 +55,9 @@ h3 {
             z-index: 0;
         } */
 /*用before撐滿整個畫面 並用posision 來定位 再用z-index拉到最前*/
-.en-op {
-    opacity: 1;
+
+.nav-tltle {
+    color: #4D5B70;
 }
 
 .en-container {
@@ -64,18 +69,19 @@ h3 {
     width: 50%;
     height: 100vh;
     background-image: url("./img/banner.jpg");
-    margin-right: 110px;
+    background-size: cover;
+    background-position: left;
 }
+
 
 .en-text {
-    width: 600px;
+    width: 50%;
     height: 600px;
-    padding: 35vh 0 0 0;
+    padding: 35vh 5% 0 5%;
     color: #4D5B70;
     letter-spacing: 1.5px;
-
-
 }
+
 
 #his {
     background-image: url("./img/his-background.jpg");
@@ -111,9 +117,9 @@ h3 {
 .his-pic::after {
     content: "";
     position: absolute;
-    width: 5px;
+    width: 2px;
     height: 100%;
-    background-color: #3F3F3F;
+    background-color: #4D5B70;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -131,7 +137,7 @@ h3 {
     position: absolute;
     left: 50%;
     top: 50%;
-    background-color: #3F3F3F;
+    background-color: #4D5B70;
     transform: translate(-50%, -50%);
 }
 
@@ -160,7 +166,9 @@ h3 {
 .his-pic-circle-img {
     width: 180px;
     height: 180px;
+    /* border: #4D5B70 1.5px solid; */
     border-radius: 50%;
+    box-shadow: 5px 5px 1em 0.1em rgba(0, 0, 0, 0.3);
 }
 
 #na {
@@ -187,9 +195,11 @@ h3 {
     width: 150px;
     height: 30px;
     margin: 0 auto;
-    font-weight:bold;
+    font-weight: bold;
     color: #4D5B70;
-    
+    border: 1px solid white;
+    border-radius: 30px;
+
 
 }
 
@@ -215,7 +225,10 @@ h3 {
     height: 600px;
     background-color: gray;
     margin-bottom: 110px;
+    background-size: cover;
+    background-position: center;
 }
+
 
 .top-pic {
     background-image: url("./img/made-top-pic.jpg");
@@ -233,9 +246,13 @@ h3 {
     padding: 180px 30px 0 30px;
     text-align: center;
 }
+.made-same-text-little{
+    line-height: 25px;
+}
 
 #com {
     padding-bottom: 200px;
+    background-color: #BDB6A8;
 }
 
 .com-container {
@@ -268,18 +285,14 @@ h3 {
 
 }
 
-.plant-all {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
+
 
 .plant-title {
     text-align: center;
-    padding: 50px 0 200px 0;
+    padding: 50px 0 50px 0;
 }
 
+/*
 .plant-top {
     width: 90%;
     border: 1px black solid;
@@ -295,8 +308,96 @@ h3 {
     border: 1px black solid;
     margin: 0 auto;
     text-align: center;
-    padding: 38px 0;
+    padding: 38px 0; 
+}*/
+#plant.js .plant-text {
+    display: none;
+    padding: 1.5em;
 }
+
+#plant.js .plant-text p {
+    line-height: 1.4em;
+    text-align: center;
+    color: white;
+}
+
+#plant .plant-all.active .plant-text {
+    display: block;
+}
+
+.plant-all {
+    position: relative;
+    max-width: 1000px;
+    min-width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 50px auto;
+    cursor: pointer;
+    background: grey;
+}
+
+.plant-all.active {
+    position: absolute;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+}
+
+.plant-all img {
+    width: auto;
+    height: 100%;
+    min-height: 300px;
+    transform: translateX(-25%);
+}
+
+.plant-all-background {
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.plant-all h2,
+.plant-all-background h2 {
+    color: white;
+    margin: 0;
+    padding: .25em;
+    position: absolute;
+    bottom: 0;
+    text-shadow: -2px 2px 3px black;
+    text-align: center;
+}
+
+.plant-all .close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 32px;
+    height: 32px;
+    background: transparent url(https://media.wponlinesupport.com/wp-content/plugins/wpos-support-plus-responsive-ticket-system/asset/images/close_btn.png) no-repeat 50% 50%;
+    background-size: contain;
+    z-index: 100;
+    cursor: pointer;
+    opacity: .8;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 110%;
+}
+
+.plant-all.inactive .close {
+    display: none;
+}
+
+.plant-all .close:hover {
+    opacity: 1;
+}
+
+/* -------------------------------------------------- */
 
 #ad {
     width: 100%;
@@ -319,6 +420,13 @@ h3 {
 }
 
 
+
+.ad-pic-container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    box-sizing: border-box;
+}
 
 
 /* .ad-containter-circle {
@@ -378,4 +486,96 @@ h3 {
     position: fixed;
     bottom: 10px;
     right: 2%;
+}
+
+@media screen and (max-width:1024px) {
+    .his-pic::after {
+        display: none;
+    }
+
+    .his-pic-circle:nth-child(n)::after {
+        display: none;
+    }
+
+    .his-img:nth-child(2n) .his-pic-circle {
+        justify-content: flex-end;
+    }
+
+    .made-same-pic {
+        margin-bottom: 30px;
+    }
+
+    .made-same-text {
+        padding: 0px 30px 90px 30px;
+    }
+
+    .card {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .en-container {
+        position: relative;
+    }
+
+    .en-pic {
+        width: 100%;
+    }
+
+    .en-text {
+        width: 100%;
+        position: absolute;
+        top: 54.5%;
+        height: 300px;
+        padding: 25px;
+        color: #4D5B70;
+        background-color: #BDB6A8;
+        text-align: justify;
+    }
+
+    .his-pic::after {
+        display: none;
+    }
+
+    .his-pic-circle:nth-child(n)::after {
+        display: none;
+    }
+
+    .his-img:nth-child(2n) .his-pic-circle {
+        justify-content: flex-start;
+    }
+
+    .his-img:nth-child(2n+1) .his-pic-circle {
+        justify-content: flex-start;
+    }
+    .his-pic-circle-img {
+        width: 90px;
+        height:90px;
+        margin: 45px 0;
+    }
+    #na {
+        width: 100%;
+        height: 100vh;
+    
+    }
+    .na-container {
+        width: 100%;
+        text-align: center;
+        padding: 50% 0;
+    }
+
+    .made-same-pic {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .made-same-text {
+        padding: 0px 30px 90px 30px;
+        text-align: justify;
+    }
+
+    .card {
+        margin-bottom: 60px;
+    }
 }
