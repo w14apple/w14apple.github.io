@@ -246,7 +246,8 @@ h3 {
     padding: 180px 30px 0 30px;
     text-align: center;
 }
-.made-same-text-little{
+
+.made-same-text-little {
     line-height: 25px;
 }
 
@@ -348,7 +349,7 @@ h3 {
 .plant-all img {
     width: auto;
     height: 100%;
-    min-height: 300px;
+    min-height: 5%;
     transform: translateX(-25%);
 }
 
@@ -484,7 +485,7 @@ h3 {
     height: 206px;
     background-image: url("./img/back-to-home.png");
     position: fixed;
-    bottom: 10px;
+    bottom: 105px;
     right: 2%;
 }
 
@@ -515,6 +516,10 @@ h3 {
 }
 
 @media screen and (max-width:768px) {
+    .nav-tltle {
+        color: white;
+    }
+
     .en-container {
         position: relative;
     }
@@ -549,16 +554,19 @@ h3 {
     .his-img:nth-child(2n+1) .his-pic-circle {
         justify-content: flex-start;
     }
+
     .his-pic-circle-img {
         width: 90px;
-        height:90px;
+        height: 90px;
         margin: 45px 0;
     }
+
     #na {
         width: 100%;
         height: 100vh;
-    
+
     }
+
     .na-container {
         width: 100%;
         text-align: center;
@@ -577,5 +585,22 @@ h3 {
 
     .card {
         margin-bottom: 60px;
+    }
+
+    #plant {
+        padding: 60px 0 250px 0;
+
+    }
+
+    #ad {
+        padding: 0;
+    }
+
+    .ad-title {
+        padding: 0 0;
+        margin: 0 0;
+    }
+    .ad-pic{
+        margin-bottom: 0;
     }
 }
