@@ -1,0 +1,51 @@
+#banner {
+  height: 550px;
+  background-color: #0C77A9;
+  padding: 50px 0px;
+}
+
+#banner .container .swiper-container {
+  background-color: #71CCF6;
+}
+
+#banner .container .swiper-container .swiper-wrapper {
+  height: 450px;
+}
+
+#banner .container .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) {
+  background-color: aqua;
+}
+
+#banner .container .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) {
+  background-color: aqua;
+}
+
+#banner .container .swiper-container .swiper-wrapper .swiper-slide:nth-child(6) {
+  background-color: aqua;
+}
+
+#activity {
+  padding: 60px 0;
+}
+
+#activity .container .row .activity-pic {
+  height: 30vh;
+  background-color: #71CCF6;
+}
+
+#activity .container .row .activity-text {
+  height: 30vh;
+  background-color: gray;
+}
+
+#item .container .row .item-title {
+  height: 60px;
+  padding: 30px 0;
+  background-color: brown;
+}
+
+#item .container .row .item-pic {
+  height: 30px;
+  background-color: #0C77A9;
+}
+/*# sourceMappingURL=index.css.map */
