@@ -8,7 +8,17 @@ h2 {
     margin: 0;
     font-size: 24px;
     font-family: 微軟正黑體;
+
+    flex-direction: column;
+    justify-content: center;
 }
+
+h2 span {
+    text-align: center;
+}
+
+
+
 
 h3 {
     margin: 0;
@@ -256,6 +266,10 @@ h3 {
     background-color: #BDB6A8;
 }
 
+.com-row-container {
+    overflow: hidden;
+}
+
 .com-container {
     width: 100%;
 }
@@ -480,16 +494,21 @@ h3 {
     background-color: rgba(0, 0, 0, 0.5)
 }
 
-.arrow {
+
+
+.arrow.show {
     width: 20px;
     height: 206px;
     background-image: url("./img/back-to-home.png");
     position: fixed;
     bottom: 105px;
-    right: 2%;
+    right: 15px;
+    cursor: pointer;
+
 }
 
 @media screen and (max-width:1024px) {
+
     .his-pic::after {
         display: none;
     }
@@ -516,6 +535,15 @@ h3 {
 }
 
 @media screen and (max-width:768px) {
+
+    h2 span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+
     .nav-tltle {
         color: white;
     }
@@ -531,7 +559,7 @@ h3 {
     .en-text {
         width: 100%;
         position: absolute;
-        top: 54.5%;
+        top: 53%;
         height: 300px;
         padding: 25px;
         color: #4D5B70;
@@ -600,7 +628,8 @@ h3 {
         padding: 0 0;
         margin: 0 0;
     }
-    .ad-pic{
+
+    .ad-pic {
         margin-bottom: 0;
     }
 }
