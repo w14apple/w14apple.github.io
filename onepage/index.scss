@@ -1,3 +1,29 @@
+h1 {
+    font-size: 60px;
+    font-family: 微軟正黑體;
+    font-weight: lighter;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 細明體;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: 細明體;
+}
+
+h4 {
+    font-size: 16px;
+    font-family: 細明體;
+}
+
+h5 {
+    font-size: 13px;
+    font-family: 標楷體;
+}
+
 #banner {
     height: 550px;
     background-color: #0C77A9;
@@ -60,16 +86,255 @@
 #item {
     .container {
         .row {
-            .item-title{
-                height: 60px;
-                padding: 30px 0;
+            .item-title {
+                text-align: center;
                 background-color: brown;
             }
-            .item-pic{
-                height: 30px;
-                background-color: #0C77A9;
+
+            .item-pic {
+                &:nth-child(2) {
+                    height: 315px;
+                    background-color: #0C77A9;
+                }
+
+                &:nth-child(3) {
+                    height: 315px;
+                    background-color: papayawhip;
+                }
+
+                &:nth-child(4) {
+                    height: 315px;
+                    background-color: #0C77A9;
+                }
+
             }
+
+            .item-btn {
+                &:nth-child(5) {
+                    height: 30px;
+                    background-color: black;
+                }
+
+                &:nth-child(6) {
+                    height: 30px;
+                    background-color: black;
+                }
+
+                &:nth-child(7) {
+                    height: 30px;
+                    background-color: black;
+                }
+            }
+
+        }
+    }
+}
+
+#doll-shop {
+    position: relative;
+    background-color: #0C77A9;
+
+    .container {
+        padding: 0;
+
+        .swiper-slide {
+            background-color: #0C77A9;
+            padding: 50px 0px 30px 0;
+        }
+
+        .img {
+            position: relative;
+            margin: 0px 0px 20px;
+
+            &::after {
+                content: attr(data-doll);
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            img {
+                width: 100%;
+                padding: 0px 0px 30px;
+            }
+        }
+    }
+}
+
+#about {
+    margin-bottom: 120px;
+
+    .container {
+        text-align: center;
+
+
+        .title {
+            padding: 60px 0 30px 0;
+        }
+
+        .row {
+            .col-6 {
+
+                .head-text {
+
+                    flex-wrap: wrap;
+                    padding: 0;
+
+                    .col-12 {
+                        padding-bottom: 15px;
+                    }
+
+                    .text {
+                        width: calc(50% - 15px);
+                        background-color: #71CCF6;
+                        padding: 15px;
+                        border-radius: 50px;
+
+                        h3 {
+                            margin-bottom: 20px;
+                        }
+
+                        &:nth-child(2) {
+                            margin: 0px 15px 0px 0px;
+                        }
+
+                        &:nth-child(3) {
+                            margin: 0px 0px 0px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#game {
+    .container {
+        .row {
+            .text {
+                h3 {
+
+                    line-height: 48px;
+                }
+            }
+
+            .pic {
+                background-color: #71CCF6;
+            }
+        }
+    }
+}
+
+#introduction {
+    .container {
+        .row {
+
+            .title {
+                padding: 30px 0;
+            }
+
+
+            h1 {
+                background-color: #71CCF6;
+                border-radius: 30px;
+                text-align: center;
+
+            }
+
+                .little-title {
+                    width: calc(50% - 15px);
+                    background-color: #71CCF6;
+                    padding: 120px 0;
+                    border-radius: 30px;
+                    margin-bottom: 50px;
+                    &:nth-child(2){
+                        margin:0 30px 30px 0;
+                    }
+                    &:nth-child(3){
+                        margin:0 0 30px 0;
+                    }                   
+                }
             
+
+            .description {
+                justify-content: center;
+                padding: 0 0 30px 0;
+                background-color: #71CCF6;
+                margin:  0 auto 30px auto;
+                border-radius: 30px;
+                position: relative;
+
+                h1 {
+                    margin: 30px 0;
+                }
+
+                h3 {
+                    padding: 0 60px;
+                    line-height: 30px;
+                }
+
+                &::before {
+                    content:"";
+                    position: absolute;
+                    top:-15%;
+                    left: 20%;
+                    width: 60px;
+                    height: 60px;
+                    background-color: red;
+                    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                }
+            }
+
+        }
+
+
+    }
+}
+
+#QA{
+    .container{
+        .row{
+            .title{
+
+            }
+            .quest{
+                background-color: aquamarine;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    background-color: #71CCF6;
+                }
+                
+            }
+            .answer{
+                width: 90%;
+                height: 50px;
+                background-color:black;
+            }
+        }
+    }
+}
+
+#footer{
+    background-color: gray;
+    .container{
+        .row{
+            .logo{
+                width: 150px;
+                height: 150px;
+                background-color:darkblue;
+                border-radius: 50%;
+            }
+            .app{
+                height: 50px;
+                background-color: brown;
+            }
+            .icon{
+                height: 60px;
+                background-color: brown;
+            }
         }
     }
 }
