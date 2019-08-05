@@ -99,7 +99,7 @@
                     <h2>快閃活動<span>活動日期:這週末期間</span></h2>
                     <h3>1. 看誰夾的多～ 第一名者將可獲得精美禮品</h3>
                     <h3>2. 會有特定商品放置機台裡面</h3>
-                    <button type="button" class="btn btn-outline-primary">下一個</button>
+                    <!-- <button type="button" class="btn btn-outline-primary">下一個</button> -->
                 </div>
             </div>
         </div>
@@ -114,25 +114,39 @@
                     <h1>商品</h1>
                 </div>
                 <div class="col-4">
-                    <div class="item-pic"></div>
+                    <div class="item-pic01"></div>
                 </div>
                 <div class="col-4">
-                    <div class="item-pic"></div>
+                    <div class="item-pic02"></div>
                 </div>
                 <div class="col-4">
-                    <div class="item-pic"></div>
+                    <div class="item-pic03"></div>
                 </div>
             </div>
             <div class="row">
-
-                <div class="col-4 item-btn"></div>
-                <div class="col-4 item-btn"></div>
-                <div class="col-4 item-btn"></div>
+                <div class="col-4 item-btn">
+                    <h4>公仔類別</h4>
+                    <button class="btn btn-outline-dark">
+                        <h5>更多商品</h5>
+                    </button>
+                </div>
+                <div class="col-4 item-btn">
+                    <h4>娃娃類別</h4>
+                    <button class="btn btn-outline-dark">
+                        <h5>更多商品</h5>
+                    </button>
+                </div>
+                <div class="col-4 item-btn">
+                    <h4>３Ｃ類別</h4>
+                    <button class="btn btn-outline-dark">
+                        <h5>更多商品</h5>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="doll-shop">
+    <section id="doll-shop" class="show">
         <div class="container">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -376,19 +390,17 @@
                     <h1>遊玩方式</h1>
                     <ul>
                         <li>
-                            <h3>移動方式</h3>
+                            <h3>按下爪子圖示預約機台</h3>
                         </li>
                         <li>
-                            <h3>按下上下左右圖示</h3>
+                            <h3>按下箭頭圖示移動</h3>
                         </li>
                         <li>
-                            <h3>鏡頭切換</h3>
+                            <h3>攝影機即可切換視角</h3>
+                            <h3>放大鏡即可放大或縮小視角</h3>
                         </li>
                         <li>
-                            <h3>點選攝影機即可切換視角</h3>
-                        </li>
-                        <li>
-                            <h3>影片試玩撥放</h3>
+                            <h3>中止遊玩</h3>
                         </li>
                     </ul>
                 </div>
@@ -399,9 +411,7 @@
                             <div class="swiper-slide"></div>
                             <div class="swiper-slide"></div>
                             <div class="swiper-slide"></div>
-                            <div class="swiper-slide"></div>
                         </div>
-                        <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
@@ -421,7 +431,7 @@
                 <div class="col-auto little-title">
                     <h1>抓樂霸</h1>
                 </div>
-                <div class=" col-10 description">
+                <div class=" col-10 description show">
                     <h1>cyberstep</h1>
                     <h3>Cyber​​step成立於2000年4月，透過網路和娛樂實現
                         我們做不到的事情，並且了解不同各個國家的情況下互相交流。
@@ -434,6 +444,13 @@
                         路世界讓世界更加歡樂，消費者能透過他們實現目標
                         ，並增加各國營運地區，增加客戶之間的通信。
                     </h3>
+                </div>
+                <div class=" col-10 toreba show">
+                    <h1>toreba</h1>
+                    <h3>透過網路連線，從遠端操控夾娃娃機的嶄新服務，讓
+                        您在家也能享受到夾娃娃的樂趣。
+                    </h3>
+                    <h3>所獲得的獎品也將會運送至你的手上。</h3>
                 </div>
             </div>
         </div>
@@ -448,25 +465,29 @@
                 <h1>A</h1>
             </div>
             <div class="row">
-
-
                 <div class="col-12  quest">
                     <h2>Q : 各國送貨問題</h2>
-                    <img src="" alt="">
+                    <botton class="down"></botton>
                 </div>
-
-                <div class="col-11 offset-1 answer">
+                <div class="col-11 offset-1 answer show">
+                    <h3 class="p-3">A : 運費會因獎品重量及寄送區域而定。運費問題將於下列圖表所示 (圖1)</h3>
                 </div>
                 <div class="col-12  quest">
                     <h2>Q : 貨幣兌換問題</h2>
+                    <botton class="down"></botton>
                 </div>
-                <div class="col-11 offset-1 answer">
+                <div class="col-11 offset-1 answer show">
+                    <h3 class="p-3">A : 主要以日本幣值為基準，其他國家以當日匯率換算成日幣再進行轉換</h3>
+
                 </div>
                 <div class="col-12 quest">
                     <h2>Q : 客服專線</h2>
+                    <botton class="down"></botton>
                 </div>
-                <div class="col-11 offset-1 answer">
-
+                <div class="col-11 offset-1 answer show">
+                    <h3>A : 聯絡資訊網址為 https://www.toreba.net/contact</h3>
+                    <h3 class="pl-5">連絡電話暫時不提供，敬請見諒。</h3>
+                    <h3 class="pl-5">時間為平日10:00～19:00 </h3>
                 </div>
             </div>
         </div>
@@ -491,11 +512,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
     integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-</script>
+    </script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
-</script>
+    </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
 
@@ -547,5 +568,19 @@
     });
 </script>
 
+<script>
+    $(".btn").click(function () {
+        $("#doll-shop").toggle("show");
+    });
+    $(".little-title").click(function () {
+        $(".description").toggle("show");
+    });
+    $(".little-title").click(function () {
+        $(".toreba").toggle("show");
+    });
+    $(".down").click(function () {
+        $(".answer").toggle("show");
+    });
+</script>
 
 </html>
