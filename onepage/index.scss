@@ -23,6 +23,15 @@ h5 {
     font-size: 13px;
     font-family: 標楷體;
 }
+.navbar{
+    .container{
+        .navbar-brand img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    }
+}
 
 #banner {
     height: 550px;
@@ -37,26 +46,20 @@ h5 {
                 height: 450px;
 
                 .swiper-slide {
-                    &:nth-child(1) {}
+                    &:nth-child(1) {
+                        background-image: url("./img/bnr01.jpg");
+                        background-size: cover;
+                    }
 
                     &:nth-child(2) {
-                        background-color: aqua;
+                        background-image: url("./img/bnr02.jpg");
+                        background-size: cover;
                     }
 
-                    &:nth-child(3) {}
-
-                    &:nth-child(4) {
-
-                        background-color: aqua;
+                    &:nth-child(3) {
+                        background-image: url("./img/bnr03.jpg");
+                        background-size: cover;
                     }
-
-                    &:nth-child(5) {}
-
-                    &:nth-child(6) {
-
-                        background-color: aqua;
-                    }
-
 
                 }
 
@@ -71,13 +74,61 @@ h5 {
     .container {
         .row {
             .activity-pic {
-                height: 30vh;
-                background-color: #71CCF6;
+                .swiper-container {
+
+                    width: 100%;
+                    height: 300px;
+
+
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        .pic {
+                            background-size:contain;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            &:nth-child(1) {
+                                background-image: url("./img/act01.jpg");
+                            }
+
+                            &:nth-child(2) {
+                                background-image: url("./img/act02.jpg");
+                            }
+
+                            &:nth-child(3) {
+                                background-image: url("./img/act03.jpg");
+                            }
+                        }
+                    }
+                }
             }
 
             .activity-text {
-                height: 30vh;
-                background-color: gray;
+                height: 100%;
+
+                h1 {
+                    padding: 15px 0;
+                }
+
+                h2 {
+                    span {
+                        font-size: 24px;
+                    }
+                }
+
+                h3 {
+                    line-height: 40px;
+                }
+
+                button {
+                    position: absolute;
+                    right: 30px;
+                    bottom: -40px;
+                }
             }
         }
     }
@@ -85,42 +136,35 @@ h5 {
 
 #item {
     .container {
+        padding: 0;
+
         .row {
+            width: 100%;
+            margin: 0;
+
             .item-title {
                 text-align: center;
                 background-color: brown;
             }
 
             .item-pic {
-                &:nth-child(2) {
-                    height: 315px;
-                    background-color: #0C77A9;
-                }
-
-                &:nth-child(3) {
-                    height: 315px;
-                    background-color: papayawhip;
-                }
-
-                &:nth-child(4) {
-                    height: 315px;
-                    background-color: #0C77A9;
-                }
-
+                box-sizing: border-box;
+                height: 315px;
+                background-image: url("./img/01.png");
             }
 
             .item-btn {
-                &:nth-child(5) {
+                &:nth-child(1) {
                     height: 30px;
                     background-color: black;
                 }
 
-                &:nth-child(6) {
+                &:nth-child(2) {
                     height: 30px;
                     background-color: black;
                 }
 
-                &:nth-child(7) {
+                &:nth-child(3) {
                     height: 30px;
                     background-color: black;
                 }
@@ -222,6 +266,39 @@ h5 {
 
             .pic {
                 background-color: #71CCF6;
+
+                .swiper-container {
+                    width: 100%;
+                    height: 350px;
+
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            &:nth-child(1) {
+                                background-image: url("./img/03.jpg")
+                            }
+
+                            &:nth-child(2) {
+                                background-image: url("./img/04.jpg")
+                            }
+
+                            &:nth-child(3) {
+                                background-image: url("./img/05.jpg")
+                            }
+
+                            &:nth-child(4) {
+                                background-image: url("./img/02.png")
+                            }
+
+                            &:nth-child(5) {
+                                background-image: url("./img/06.jpg")
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -243,26 +320,28 @@ h5 {
 
             }
 
-                .little-title {
-                    width: calc(50% - 15px);
-                    background-color: #71CCF6;
-                    padding: 120px 0;
-                    border-radius: 30px;
-                    margin-bottom: 50px;
-                    &:nth-child(2){
-                        margin:0 30px 30px 0;
-                    }
-                    &:nth-child(3){
-                        margin:0 0 30px 0;
-                    }                   
+            .little-title {
+                width: calc(50% - 15px);
+                background-color: #71CCF6;
+                padding: 120px 0;
+                border-radius: 30px;
+                margin-bottom: 50px;
+
+                &:nth-child(2) {
+                    margin: 0 30px 30px 0;
                 }
-            
+
+                &:nth-child(3) {
+                    margin: 0 0 30px 0;
+                }
+            }
+
 
             .description {
                 justify-content: center;
                 padding: 0 0 30px 0;
                 background-color: #71CCF6;
-                margin:  0 auto 30px auto;
+                margin: 0 auto 30px auto;
                 border-radius: 30px;
                 position: relative;
 
@@ -276,9 +355,9 @@ h5 {
                 }
 
                 &::before {
-                    content:"";
+                    content: "";
                     position: absolute;
-                    top:-15%;
+                    top: -15%;
                     left: 20%;
                     width: 60px;
                     height: 60px;
@@ -293,45 +372,60 @@ h5 {
     }
 }
 
-#QA{
-    .container{
-        .row{
-            .title{
+#QA {
+    .container {
+        .title {
+            float: left;
+        }
 
-            }
-            .quest{
+        .row {
+
+
+            .quest {
                 background-color: aquamarine;
-                img{
+
+                img {
                     width: 30px;
                     height: 30px;
                     background-color: #71CCF6;
                 }
-                
+
             }
-            .answer{
+
+            .answer {
                 width: 90%;
                 height: 50px;
-                background-color:black;
+                background-color: black;
             }
         }
     }
 }
 
-#footer{
+#footer {
     background-color: gray;
-    .container{
-        .row{
-            .logo{
-                width: 150px;
-                height: 150px;
-                background-color:darkblue;
+
+    .container {
+        .row {
+            .logo {
+                width: 100px;
+                height: 100px;
+                background-image: url("./img/logo.jpg");
                 border-radius: 50%;
             }
-            .app{
-                height: 50px;
-                background-color: brown;
+
+            .app {
+                height: 60px;
+
+                &:nth-child(2) {
+                    background-image: url("./img/ios.png");
+                }
+
+                &:nth-child(3) {
+                    background-image: url("./img/apk.png");
+                }
             }
-            .icon{
+
+            .icon {
                 height: 60px;
                 background-color: brown;
             }
