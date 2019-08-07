@@ -801,10 +801,10 @@
                 <div class="col-12 title">
                     <h1>簡介</h1>
                 </div>
-                <div class="col-auto little-title">
+                <div class="col-auto little-title little-title01">
                     <h1>公司</h1>
                 </div>
-                <div class="col-auto little-title">
+                <div class="col-auto little-title little-title02">
                     <h1>抓樂霸</h1>
                 </div>
                 <div class=" col-10 description show">
@@ -836,31 +836,31 @@
     <section id="QA">
         <div class="container">
             <div class="col-1 title">
-                <h1>Q</h1>
-                <h1>&</h1>
-                <h1>A</h1>
+                <h2>Q</h2>
+                <h2>&</h2>
+                <h2>A</h2>
             </div>
             <div class="row">
                 <div class="col-12  quest">
                     <h2>Q : 各國送貨問題</h2>
-                    <botton class="down"></botton>
+                    <botton class="down01 down"></botton>
                 </div>
-                <div class="col-11 offset-1 answer show">
+                <div class="col-11 offset-1 answer answer01 show">
                     <h3 class="p-3">A : 運費會因獎品重量及寄送區域而定。運費問題將於下列圖表所示 (圖1)</h3>
                 </div>
                 <div class="col-12  quest">
                     <h2>Q : 貨幣兌換問題</h2>
-                    <botton class="down"></botton>
+                    <botton class="down02 down"></botton>
                 </div>
-                <div class="col-11 offset-1 answer show">
+                <div class="col-11 offset-1 answer answer02 show">
                     <h3 class="p-3">A : 主要以日本幣值為基準，其他國家以當日匯率換算成日幣再進行轉換</h3>
 
                 </div>
                 <div class="col-12 quest">
                     <h2>Q : 客服專線</h2>
-                    <botton class="down"></botton>
+                    <botton class="down03 down"></botton>
                 </div>
-                <div class="col-11 offset-1 answer show">
+                <div class="col-11 offset-1 answer answer03  show">
                     <h3>A : 聯絡資訊網址為 https://www.toreba.net/contact</h3>
                     <h3 class="pl-5">連絡電話暫時不提供，敬請見諒。</h3>
                     <h3 class="pl-5">時間為平日10:00～19:00 </h3>
@@ -881,6 +881,9 @@
         </div>
     </section>
 
+
+
+
 </body>
 
 
@@ -888,11 +891,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
     integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
-    </script>
+</script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
-    </script>
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
 
@@ -1006,34 +1009,79 @@
     //         }
     //     });
     // }
-    $(".btn1").click(function () {
-        var swiper_shop = [$("#figure-shop"), $("#doll-shop"), $("tech-shop")];
-        for (let i = 0; i < swiper_shop.length; i++) {
-            const shop = swiper_shop[i];
-            console.log(shop);
-            if (shop == $("#figure-shop")) {
-                $("#doll-shop").removeClass("show");
-                $("#tech-shop").removeClass("show");
-            } else {
-                $("#figure-shop").addClass("show");
-            }
+
+    var btns = document.querySelectorAll(".btn");
+    //宣告一個變數為btns 為 class的btn的陣列
 
 
+    
+
+    $(btns).click(function () {
+        //btn按鈕的點擊事件
+        var shop_btn = $(".btn").index(this);
+        // var shop_swiper = $(".shop").data("shop");
+        console.log(shop_btn);
+
+        if (shop_btn == 0) {
+            $("#figure-shop").addClass("show");
+            $("#doll-shop").removeClass("show");
+            $("#tech-shop").removeClass("show");
+        };
+
+        if (shop_btn == 1) {
+            $("#doll-shop").addClass("show");
+            $("#figure-shop").removeClass("show");
+            $("#tech-shop").removeClass("show");
+        };
+
+        if (shop_btn == 2) {
+            $("#tech-shop").addClass("show");
+            $("#doll-shop").removeClass("show");
+            $("#figure-shop").removeClass("show");
         }
-    }); 
-   
-   //宣告一個變數給按鈕
-
-   //宣告一個變數給swiper
-
-   //使用迴圈將各個按鈕逐一找出
-   //使用迴圈將各個swiper逐一找出
-   //對於按鈕給予點擊事件
-   //如果swiper01為當前的swiper01時進行關閉
-   //否則切換成swiper01
 
 
+        //宣告一個變數 將把btn 的數值 0 1 2 提出來
+        //如果0的數值為swiper01的時候
+        //進行關閉
+        //如果不是就切換成swiper01
 
+    });
+
+
+    //宣告一個變數給按鈕
+
+    //宣告一個變數給swiper  (回傳的數值要陣列)
+
+    //使用迴圈將各個按鈕逐一找出
+    //使用迴圈將各個swiper逐一找出
+    //對於按鈕給予點擊事件
+    //如果swiper01為當前的swiper01時進行關閉
+    //否則切換成swiper01
+    $(".little-title01").click(function () {
+        $(".description").addClass("show")
+        $(".toreba").removeClass("show")
+    })
+
+
+    $(".little-title02").click(function () {
+        $(".toreba").addClass("show")
+        $(".description").removeClass("show")
+    })
+
+
+
+    $(".down01").click(function () {
+        $(".answer01").toggle("show")
+    });
+
+    $(".down02").click(function () {
+        $(".answer02").toggle("show")
+    });
+
+    $(".down03").click(function () {
+        $(".answer03").toggle("show")
+    });
 </script>
 
 </html>
