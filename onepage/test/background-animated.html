@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas height="920" width="1160" style="position: fixed;left: 0;top: 0;pointer-events: none;"
+        id="canvas_sakura"></canvas>
+</body>
+<script>
+    //楓葉飄落    
+    var stop, staticx;
+    var img_Fallingpicture = new Image();
+    img_Fallingpicture.src = "https://pic.90sjimg.com/design/00/23/31/57/58dd0622604b6.png";
+
+    function Sakura(x, y, s, r, fn) {
+        this.x = x;
+        this.y = y;
+        this.s = s;
+        this.r = r;
+        this.fn = fn;
+    }
+
+    Sakura.prototype.draw = function (cxt) {
+        cxt.save();
+        var xc = 40 * this.s / 4;
+        cxt.translate(this.x, this.y);
+        cxt.rotate(this.r);
+        cxt.drawImage(img_Fallingpicture, 0, 0, window.innerWidth * 0.04 * this.s, window.innerWidth * 0.04 * this
+            .s)
+        cxt.restore();
+    }
+
+    Sakura.prototype.update = function () {
+        this.x = this.fn.x(this.x, this.y);
+        this.y = this.fn.y(this.y, this.y);
+        this.r = this.fn.r(this.r);
+        if (this.x > window.innerWidth ||
+            this.x < 0 ||
+            this.y > window.innerHeight ||
+            this.y < 0
+        ) {
+            this.r = getRandom('fnr');
+            if (Math.random() > 0.4) {
+                this.x = getRandom('x');
+                this.y = 0;
+                this.s = getRandom('s');
+                this.r = getRandom('r');
+            } else {
+                this.x = window.innerWidth;
+                this.y = getRandom('y');
+                this.s = getRandom('s') * 1;
+                this.r = getRandom('r');
+            }
+        }
+    }
+
+    SakuraList = function () {
+        this.list = [];
+    }
+    SakuraList.prototype.push = function (sakura) {
+        this.list.push(sakura);
+    }
+    SakuraList.prototype.update = function () {
+        for (var i = 0, len = this.list.length; i < len; i++) {
+            this.list[i].update();
+        }
+    }
+    SakuraList.prototype.draw = function (cxt) {
+        for (var i = 0, len = this.list.length; i < len; i++) {
+            this.list[i].draw(cxt);
+        }
+    }
+    SakuraList.prototype.get = function (i) {
+        return this.list[i];
+    }
+    SakuraList.prototype.size = function () {
+        return this.list.length;
+    }
+
+    function getRandom(option) {
+        var ret, random;
+        switch (option) {
+            case 'x':
+                ret = Math.random() * window.innerWidth;
+                break;
+            case 'y':
+                ret = Math.random() * window.innerHeight;
+                break;
+            case 's':
+                ret = Math.random();
+                break;
+            case 'r':
+                ret = Math.random() * 6;
+                break;
+            case 'fnx':
+                random = -0.5 + Math.random() * 0.01;
+                ret = function (x, y) {
+                    return x + 0.5 * random - 1.7;
+                };
+                break;
+            case 'fny':
+                random = 0.5 + Math.random() * 0.1;
+                ret = function (x, y) {
+                    return y + random;
+                };
+                break;
+            case 'fnr':
+                random = Math.random() * 0.01;
+                ret = function (r) {
+                    return r + random;
+                };
+                break;
+        }
+        return ret;
+    }
+
+    function startSakura() {
+        requestAnimationFrame = window.requestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            window.oRequestAnimationFrame;
+        var canvas = document.createElement('Canvas'),
+            cxt;
+        staticx = true;
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        window.addEventListener("resize", function () {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        })
+        canvas.setAttribute('style', 'position: fixed;left: 0;top: 0;pointer-events: none;');
+        canvas.setAttribute('id', 'canvas_sakura');
+        document.getElementsByTagName('body')[0].appendChild(canvas);
+        cxt = canvas.getContext('2d');
+        var sakuraList = new SakuraList();
+        for (var i = 0; i < 20; i++) {
+            var sakura, randomX, randomY, randomS, randomR, randomFnx, randomFny, randomFnR;
+            randomX = getRandom('x');
+            randomY = getRandom('y');
+            randomR = getRandom('r');
+            randomS = getRandom('s');
+            randomFnx = getRandom('fnx');
+            randomFny = getRandom('fny');
+            randomFnR = getRandom('fnr');
+            sakura = new Sakura(randomX, randomY, randomS, randomR, {
+                x: randomFnx,
+                y: randomFny,
+                r: randomFnR
+            });
+            sakura.draw(cxt);
+            sakuraList.push(sakura);
+        }
+
+        requestAnimationFrame(function () {
+            cxt.clearRect(0, 0, canvas.width, canvas.height);
+            sakuraList.update();
+            sakuraList.draw(cxt);
+            requestAnimationFrame(arguments.callee);
+        })
+    }
+
+    img_Fallingpicture.onload = function () {
+        startSakura();
+    }
+</script>
+
+</html>

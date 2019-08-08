@@ -20,6 +20,15 @@
 
 
 <body>
+    <section id="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -153,22 +162,22 @@
                     <div class="swiper-slide">
                         <div class="row">
                             <div class="col-2 img" data-doll="6000$/個">
+                                <img src="/img/shop/figure01.jpg" alt="">
+                            </div>
+                            <div class="col-2 img" data-doll="9999$/個">
                                 <img src="/img/item01.jpg" alt="">
                             </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
+                            <div class="col-2 img" data-doll="4500$/個">
+                                <img src="/img/shop/figure03.jpg" alt="">
                             </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
+                            <div class="col-2 img" data-doll="3000$/個">
+                                <img src="/img/shop/figure04.jpg" alt="">
                             </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
+                            <div class="col-2 img" data-doll="1000$/個">
+                                <img src="/img/shop/figure05.jpg" alt="">
                             </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
-                            </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
+                            <div class="col-2 img" data-doll="200$/個">
+                                <img src="/img/shop/figure06.jpg" alt="">
                             </div>
                             <div class="col-2 img" data-doll="666$/個">
                                 <img src="/img/logo.jpg" alt="">
@@ -338,29 +347,29 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="row">
-                            <div class="col-2 img" data-doll="4000$/個">
+                            <div class="col-2 img" data-doll="400$/個">
                                 <img src="/img/item02.jpg" alt="">
                             </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
+                            <div class="col-2 img" data-doll="500$/個">
+                                <img src="/img/shop/doll01.jpg" alt="">
                             </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
+                            <div class="col-2 img" data-doll="100$/個">
+                                <img src="/img/shop/doll02.jpg" alt="">
                             </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
+                            <div class="col-2 img" data-doll="200$/個">
+                                <img src="/img/shop/doll03.jpg" alt="">
                             </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
+                            <div class="col-2 img" data-doll="300$/個">
+                                <img src="/img/shop/doll04.jpg" alt="">
                             </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
+                            <div class="col-2 img" data-doll="400$/個">
+                                <img src="/img/shop/doll05.jpg" alt="">
                             </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
+                            <div class="col-2 img" data-doll="800$/個">
+                                <img src="/img/shop/doll06.jpg" alt="">
                             </div>
-                            <div class="col-2 img" data-doll="666$/個">
-                                <img src="/img/logo.jpg" alt="">
+                            <div class="col-2 img" data-doll="450$/個">
+                                <img src="/img/shop/doll07.jpg" alt="">
                             </div>
                             <div class="col-2 img" data-doll="666$/個">
                                 <img src="/img/logo.jpg" alt="">
@@ -872,11 +881,11 @@
     <section id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-2 offset-2 logo"></div>
-                <div class="col-2 app"></div>
-                <div class="col-2 app"></div>
-                <div class="col-1 icon"></div>
-                <div class="col-1 icon"></div>
+                <div class="logo"></div>
+                <div class="col-2 mr-2 offset-4 app"></div>
+                <div class="col-2 mr-2 app"></div>
+                <div class="col-1 mr-2 icon"></div>
+                <div class="col-1 mr-2 icon"></div>
             </div>
         </div>
     </section>
@@ -1014,7 +1023,7 @@
     //宣告一個變數為btns 為 class的btn的陣列
 
 
-    
+
 
     $(btns).click(function () {
         //btn按鈕的點擊事件
@@ -1023,19 +1032,19 @@
         console.log(shop_btn);
 
         if (shop_btn == 0) {
-            $("#figure-shop").addClass("show");
+            $("#figure-shop").toggleClass("show");
             $("#doll-shop").removeClass("show");
             $("#tech-shop").removeClass("show");
         };
 
         if (shop_btn == 1) {
-            $("#doll-shop").addClass("show");
+            $("#doll-shop").toggleClass("show");
             $("#figure-shop").removeClass("show");
             $("#tech-shop").removeClass("show");
         };
 
         if (shop_btn == 2) {
-            $("#tech-shop").addClass("show");
+            $("#tech-shop").toggleClass("show");
             $("#doll-shop").removeClass("show");
             $("#figure-shop").removeClass("show");
         }

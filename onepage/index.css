@@ -548,17 +548,23 @@ h5 {
 
 #footer {
   background-color: gray;
+  padding: 30px 0;
 }
 
 #footer .container .row .logo {
   width: 100px;
   height: 100px;
   background-image: url("./img/logo.jpg");
+  background-size: cover;
+  background-position: center;
   border-radius: 50%;
 }
 
 #footer .container .row .app {
   height: 60px;
+  margin-top: 20px;
+  background-size: cover;
+  background-position: center;
 }
 
 #footer .container .row .app:nth-child(2) {
@@ -570,7 +576,15 @@ h5 {
 }
 
 #footer .container .row .icon {
-  height: 60px;
-  background-color: brown;
+  background-size: cover;
+  background-position: center;
+}
+
+#footer .container .row .icon:nth-child(4) {
+  background-image: url("./img/line.svg");
+}
+
+#footer .container .row .icon:nth-child(5) {
+  background-image: url("./img/facebook.svg");
 }
 /*# sourceMappingURL=index.css.map */
